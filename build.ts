@@ -17,6 +17,7 @@ interface TokenColor {
 }
 
 interface LangExt {
+  langKey?: string;
   tokenColors: TokenColor[];
   semanticTokenColors?: { [key: string]: string };
 }
@@ -71,6 +72,15 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
     `./src/languages/${lang_name}`,
   );
   if (lang != undefined) {
+    if (lang.langKey != undefined) {
+      const lang_key = "." + lang.langKey;
+      lang.tokenColors.forEach((token_color) => {
+        const scopes = token_color.scope.split(",").map((scope) =>
+          scope + lang_key
+        );
+        token_color.scope = scopes.join(",");
+      });
+    }
     console.info(`Adding language ${lang_name}`);
     if (!!lang.tokenColors) {
       res.tokenColors = res.tokenColors.concat(lang.tokenColors);

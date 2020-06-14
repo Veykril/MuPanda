@@ -42,9 +42,13 @@ tokenColors:
 # Storage
 # -----------------------------------------------------------------------------
 # Generic <storage> matches
-- scope: storage
+- scope: storage, storage.type
   settings:
-    foreground: _orange
+    foreground: _pink
+
+- scope: storage.modifier
+  settings:
+    foreground: _pink
 
 # -----------------------------------------------------------------------------
 # Constants
@@ -96,3 +100,6 @@ tokenColors:
 - scope: entity.name.function
   settings:
     foreground: _blue
+- scope: entity.name.type
+  settings:
+    foreground: _orange
