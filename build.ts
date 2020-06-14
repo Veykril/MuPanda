@@ -18,7 +18,7 @@ interface TokenColor {
 
 interface LangExt {
   tokenColors: TokenColor[];
-  semanticTokenColors: { [key: string]: string };
+  semanticTokenColors?: { [key: string]: string };
 }
 
 function parse_yaml_opt<T extends object>(
@@ -66,18 +66,23 @@ const res = { ...base, ...workbench };
 
 /// append lang colors
 for (const dirEntry of Deno.readDirSync("./src/languages")) {
+  const lang_name = dirEntry.name;
   const lang = parse_yaml_opt<LangExt>(
-    "./src/languages/" + dirEntry.name,
+    `./src/languages/${lang_name}`,
   );
   if (lang != undefined) {
-    res.tokenColors = res.tokenColors.concat(lang.tokenColors);
-    res.semanticTokenColors = {
-      ...res.semanticTokenColors,
-      ...lang.semanticTokenColors,
-    };
+    console.info(`Adding language ${lang_name}`);
+    if (!!lang.tokenColors) {
+      res.tokenColors = res.tokenColors.concat(lang.tokenColors);
+    }
+    if (!!lang.semanticTokenColors) {
+      res.semanticTokenColors = {
+        ...res.semanticTokenColors,
+        ...lang.semanticTokenColors,
+      };
+    }
   }
 }
-
 /// resolve colors
 for (const property in res.colors) {
   const color_key = res.colors[property];

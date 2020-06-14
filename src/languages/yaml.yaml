@@ -1,0 +1,4 @@
+tokenColors:
+- scope: entity.name.tag.yaml
+  settings:
+    foreground: _light-orange
