@@ -80,6 +80,6 @@ semanticTokenColors:
   function.unsafe:
     foreground: _red
     fontStyle: bold
-  function.attribute: _blue
+  function.attribute: _light-blue
   macro: _light-blue
-  attribute: _contrast-gray
+  attribute: _contrast-_foreground
