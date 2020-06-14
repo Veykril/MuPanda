@@ -1,0 +1,98 @@
+$schema: vscode://schemas/color-theme
+author: Siamak Mokhtari, Modified by Lukas Wirth
+name: Panda Syntax – Beta
+colorSpaceName: sRGB
+semanticClass: theme.dark.mu_panda
+tokenColors:
+
+# -----------------------------------------------------------------------------
+# Comments
+# -----------------------------------------------------------------------------
+# Generic <comment> matches
+- scope: comment
+  settings:
+    foreground: _light-midnight
+    fontStyle: italic
+
+- scope: comment.block
+  settings:
+    foreground: _light-midnight
+    fontStyle: italic
+
+# -----------------------------------------------------------------------------
+# Keywords & Operators
+# -----------------------------------------------------------------------------
+# Generic <keyword> matches
+- scope: keyword
+  settings:
+    foreground: _pink
+
+# Make operators light gray by default
+- scope: keyword.operator
+  settings:
+    foreground: _very-light-gray
+
+# 1. Control flow operators
+# 2. `new` keyword
+- scope: keyword.control, keyword.operator.new
+  settings:
+    foreground: _pink
+
+# -----------------------------------------------------------------------------
+# Storage
+# -----------------------------------------------------------------------------
+# Generic <storage> matches
+- scope: storage
+  settings:
+    foreground: _orange
+
+# -----------------------------------------------------------------------------
+# Constants
+# -----------------------------------------------------------------------------
+# Generic <constant> matches
+- scope: constant
+  settings:
+    foreground: _orange
+
+# true/false booleans, null, undefined
+- scope: constant.language
+  settings:
+    foreground: _light-pink
+
+# Regex, string escape `\`
+- scope: constant.character.escape
+  settings:
+    foreground: _light-green
+
+# -----------------------------------------------------------------------------
+# Variables && Parameters
+# -----------------------------------------------------------------------------
+# Generic <variable> matches
+- scope: variable
+  settings:
+    foreground: _very-light-gray
+
+# Function parameters
+- scope: variable.parameter
+  settings:
+    foreground: _very-light-gray
+
+- scope: variable.other.constant, variable.language.this, variable.language.self
+  settings:
+    foreground: _light-pink
+
+# -----------------------------------------------------------------------------
+# Strings
+# -----------------------------------------------------------------------------
+# Generic string match
+- scope: string
+  settings:
+    foreground: _green
+
+# -----------------------------------------------------------------------------
+# Entities
+# -----------------------------------------------------------------------------
+# Function names
+- scope: entity.name.function
+  settings:
+    foreground: _blue

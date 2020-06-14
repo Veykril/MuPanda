@@ -1,0 +1,35 @@
+{
+	"name": "theme-mupanda",
+	"displayName": "MuPanda Theme",
+	"description": "MuPanda Theme for Visual Studio Code.",
+	"version": "0.1.0",
+	"publisher": "veykril",
+	"engines": {
+		"vscode": "^1.20.0"
+	},
+	"scripts": {
+		"build": "deno run --allow-read --allow-write build.ts"
+	},
+	"categories": [
+		"Themes"
+	],
+	"homepage": "https://github.com/veykril/mupanda",
+	"galleryBanner": {
+		"color": "#2a2c2d",
+		"theme": "dark"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/veykril/mupanda"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "MuPanda",
+				"uiTheme": "vs-dark",
+				"path": "./build/MuPanda.json"
+			}
+		]
+	},
+	"devDependencies": {}
+}

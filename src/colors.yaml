@@ -1,0 +1,78 @@
+# Color name structure is as follows:
+#   _((very-)?(light|dark)-)?[a-zA-Z_]+(-fade(-weak?))?
+
+_transparent:            '#00000000'
+
+# -----------------------------------------------------------------------------
+# Gray Scale
+# -----------------------------------------------------------------------------
+_very-light-gray:      '#E6E6E6'
+_very-light-gray-fade: '#FFFFFF'
+_lighter-gray:         '#CDCDCD'
+_lighter-gray-fade:    '#CDCDCD30'
+_contrast-gray:        '#BBBBBB'
+_light-gray:           '#757575'
+_light-midnight:       '#676B79'
+_steel-gray:           '#3E4250'
+_gray:                 '#373B41'
+_gray-fade:            '#373B4199'
+_seal:                 '#31353a' 
+_very-dark-gray:       '#2a2c2d' 
+_charcoal:             '#222223' 
+
+# -----------------------------------------------------------------------------
+# Blue+Purple+Green
+# -----------------------------------------------------------------------------
+_blue:             '#45A9F9'
+_blue-fade:        '#45A9F990'
+_light-blue:       '#6FC1FF'
+_purple:           '#B084EB'
+_purple-fade:      '#B084EB60'
+_purple-fade-weak: '#B084EB40'
+_light-purple:     '#BCAAFE'
+_green:            '#19f9d8'
+_green-fade:       '#19f9d899'
+_light-green:      '#6FE7D2'
+
+# -----------------------------------------------------------------------------
+# Pink+Red+Orange
+# -----------------------------------------------------------------------------
+_red:               '#FF2C6D'
+_light-red:         '#FF4B82'
+_light-red-fade:    '#FF4B8266'
+_orange:            '#FFB86C'
+_orange-fade:       '#FFB86C60'
+_orange-fade-weak:  '#FFB86C40'
+_light-orange:      '#FFCC95'
+_light-orange-fade: '#FFCC9560'
+_pink:              '#FF75B5'
+_light-pink:        '#FF9AC1'
+_light-pink-fade:   '#FF9AC170'
+
+# -----------------------------------------------------------------------------
+# Element Colors
+# -----------------------------------------------------------------------------
+# Two backgrounds are used to provide contrast between section in editor.
+# Foreground color for normal font, use green for contrast fonts
+_background-dark:        _very-dark-gray
+_background-light:       _seal
+_foreground:             _very-light-gray
+_diff-green:             _green-fade
+_diff-red:               _light-red-fade
+_merge-current-header:   _purple-fade
+_merge-current-content:  _purple-fade-weak
+_merge-incoming-header:  _orange-fade
+_merge-incoming-content: _orange-fade-weak
+_font-primary:           _very-light-gray
+_border:                 _charcoal
+
+# Git Colors
+_git-modified:  _light-orange
+_git-added:     _green
+_git-removed:   _light-red
+_git-ignored:   _light-gray
+
+# Linter Colors
+_error:   _light-red
+_warning: _light-orange
+_info:    _light-blue

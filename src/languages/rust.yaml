@@ -1,0 +1,8 @@
+tokenColors:
+  # &, ::, =>, etc.
+  - scope: keyword.operator.misc, keyword.operator.sigil
+    settings:
+      foreground: _pink
+
+semanticTokenColors:
+  formatSpecifier: _light-orange
