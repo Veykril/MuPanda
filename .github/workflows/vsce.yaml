@@ -24,6 +24,10 @@ jobs:
           ${{ runner.OS }}-
     - name: Install vsce
       run: npm install -g vsce
+    - name: Install deno
+      run: curl -fsSL https://deno.land/x/install/install.sh | sh
+    - name: Build theme
+      run: /home/runner/.deno/bin/deno run --allow-read --allow-write build.ts
     - name: Package extension
       run: vsce package
     - uses: actions/upload-artifact@v2

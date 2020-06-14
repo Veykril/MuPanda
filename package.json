@@ -7,9 +7,6 @@
 	"engines": {
 		"vscode": "^1.20.0"
 	},
-	"scripts": {
-		"build": "deno run --allow-read --allow-write build.ts"
-	},
 	"categories": [
 		"Themes"
 	],
