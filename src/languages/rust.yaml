@@ -3,7 +3,7 @@ tokenColors:
   # &, ::, =>, etc.
   - scope: keyword.operator.misc, keyword.operator.sigil
     settings:
-      foreground: _pink
+      foreground: _foreground
   - scope: storage.modifier.visibility, storage.modifier.mut, storage.modifier.dyn, storage.modifier.const
     settings:
       foreground: _pink
@@ -31,8 +31,55 @@ tokenColors:
   - scope: support.type.primitive
     settings:
       foreground: _light-orange
-  - scope: meta.type_params
-    settings:
-      foreground: _orange
+  # also colors the angle brackets, so just rely on semantic highlighting instead for this
+  #- scope: meta.type_params
+  #  settings:
+  #    foreground: _orange
 semanticTokenColors:
+  # todo, move the general ones to base.yaml
   formatSpecifier: _light-orange
+  string: _green
+  boolean: _light-pink
+  # types
+  selfType: _light-orange
+  type: _orange
+  typeAlias: _orange
+  builtinType: _light-orange
+  struct: _orange
+  enum: _orange
+  union: _orange
+  enumMember: _blue
+  interface: _purple
+  namespace: _foreground
+  # generics
+  typeParameter: _orange
+  lifetime:
+    foreground: _green
+    fontStyle: italic
+  # keywords
+  keyword: _pink
+  keyword.unsafe: 
+    foreground: _red
+    fontStyle: bold
+  selfKeyword: _light-pink
+  variable: _foreground
+  variable.mutable:
+    foreground: _foreground
+    fontStyle: underline
+  variable.const:
+    foreground: _foreground
+    fontStyle: bold
+  variable.static:
+    foreground: _foreground
+    fontStyle: bold
+  variable.static.mutable:
+    foreground: _foreground
+    fontStyle: bold underline
+  property: _foreground
+  function: _blue
+  function.unsafe:
+    foreground: _red
+    fontStyle: bold
+  function.attribute: _blue
+  macro: _light-blue
+  attribute: _contrast-gray

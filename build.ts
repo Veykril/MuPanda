@@ -4,7 +4,7 @@ type MappedObject = { [key: string]: string };
 
 interface Base {
   tokenColors: TokenColor[];
-  semanticTokenColors: { [key: string]: string };
+  semanticTokenColors: SemanticTokenColors;
 }
 
 interface Workbench {
@@ -13,13 +13,22 @@ interface Workbench {
 
 interface TokenColor {
   scope: string;
-  settings: { foreground?: string; fontStyle?: string };
+  settings: ColorSettings;
+}
+
+interface ColorSettings {
+  foreground?: string;
+  fontStyle?: string;
 }
 
 interface LangExt {
   langKey?: string;
   tokenColors: TokenColor[];
-  semanticTokenColors?: { [key: string]: string };
+  semanticTokenColors?: SemanticTokenColors;
+}
+
+interface SemanticTokenColors {
+  [key: string]: (string | ColorSettings);
 }
 
 function parse_yaml_opt<T extends object>(
@@ -57,7 +66,7 @@ for (let property in theme_colors) {
 
 // Base includes general language syntax tokens
 const base = parse_yaml<Base>("src/base.yaml");
-base.semanticTokenColors = {};
+if (!base.semanticTokenColors) base.semanticTokenColors = {};
 
 // VSCode workbench theme definitions
 const workbench = parse_yaml<Workbench>("src/workbench.yaml");
@@ -125,14 +134,24 @@ for (const token_color of res.tokenColors) {
 /// resolve semantic tokencolors
 for (const property in res.semanticTokenColors) {
   const color_key = res.semanticTokenColors[property];
-
-  const color = theme_colors[color_key];
-  if (color != undefined) {
-    res.semanticTokenColors[property] = color;
-  } else {
-    console.warn(
-      `Unknown color key ${color_key}`,
-    );
+  if (typeof (color_key) === "string") {
+    const color = theme_colors[color_key];
+    if (color != undefined) {
+      res.semanticTokenColors[property] = color;
+    } else {
+      console.warn(
+        `Unknown color key ${color_key}`,
+      );
+    }
+  } else if (!!color_key.foreground) {
+    const color = theme_colors[color_key.foreground];
+    if (color != undefined) {
+      color_key.foreground = color;
+    } else {
+      console.warn(
+        `Unknown color key ${color_key.foreground}`,
+      );
+    }
   }
 }
 
