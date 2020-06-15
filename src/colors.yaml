@@ -25,6 +25,7 @@ _charcoal:             '#222223'
 # -----------------------------------------------------------------------------
 _blue:             '#45A9F9'
 _blue-fade:        '#45A9F990'
+_blue-fade-weak:   '#45A9F940'
 _light-blue:       '#6FC1FF'
 _purple:           '#B084EB'
 _purple-fade:      '#B084EB60'
@@ -32,12 +33,14 @@ _purple-fade-weak: '#B084EB40'
 _light-purple:     '#BCAAFE'
 _green:            '#19f9d8'
 _green-fade:       '#19f9d899'
+_green-fade-weak:  '#19f9d840'
 _light-green:      '#6FE7D2'
 
 # -----------------------------------------------------------------------------
 # Pink+Red+Orange
 # -----------------------------------------------------------------------------
 _red:               '#FF2C6D'
+_red-fade:          '#FF2C6D66'
 _light-red:         '#FF4B82'
 _light-red-fade:    '#FF4B8266'
 _orange:            '#FFB86C'
@@ -76,6 +79,7 @@ _git-ignored:   _light-gray
 _error:   _light-red
 _warning: _light-orange
 _info:    _light-blue
+_hint:    _light-orange
 
 # Generic Language Colors
 _keyword: _pink

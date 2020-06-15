@@ -2,10 +2,11 @@ colors:
   # -----------------------------------------------------------------------------
   # Base Colors
   # -----------------------------------------------------------------------------
-  # Defaults for editor elements, will be used if not set by a specific component
-  # focusBorder. TODO: widget.shadow, selection.background
+  # Defaults for editor elements, will be used if not set by a specific component.
+  # TODO: widget.shadow, selection.background
   foreground:      _foreground
   errorForeground: _light-red
+  focusBorder:     _green-fade
 
   # -----------------------------------------------------------------------------
   # Activity Bar
@@ -32,13 +33,17 @@ colors:
   button.background:      _blue
   button.foreground:      _very-light-gray-fade
   button.hoverBackground: _light-midnight
+  checkbox.border:        _blue
+  # -----------------------------------------------------------------------------
+  # Input
+  # -----------------------------------------------------------------------------
+  inputValidation.errorBackground: _red-fade
+  inputValidation.errorBorder: _error
   # -----------------------------------------------------------------------------
   # Diff View
   # -----------------------------------------------------------------------------
   diffEditor.insertedTextBackground: _diff-green
-  # diffEditor.insertedTextBorder: NONE
   diffEditor.removedTextBackground: _diff-red
-  # diffEditor.removedTextBorder: NONE
   # -----------------------------------------------------------------------------
   # Merge Conflicts
   # -----------------------------------------------------------------------------
@@ -50,39 +55,38 @@ colors:
   # -----------------------------------------------------------------------------
   # Editor
   # -----------------------------------------------------------------------------
-  editor.background:           _background-light
-  editor.foreground:           _foreground
-  editorCursor.foreground:     _light-red
-  editorRuler.foreground:      _purple-fade
-  editorBracketMatch.border:   _green
-  editorCodeLens.foreground:   _merge-incoming-content
-  editorWhitespace.foreground: _steel-gray
-  # editorBracketMatch.background: NONE
+  editor.background:             _background-light
+  editor.foreground:             _foreground
+  editorCursor.foreground:       _light-red
+  editorRuler.foreground:        _purple-fade
+  editorBracketMatch.border:     _green
+  editorBracketMatch.background: _green-fade-weak
+  editorCodeLens.foreground:     _orange-fade-weak
+  editorWhitespace.foreground:   _steel-gray
   # Selection highlight settings are applied when text is selected, the highlight
   # background will automatically highlight all other matches of the selected text
-  editor.selectionBackground:          _merge-incoming-content
-  editor.inactiveSelectionBackground:  _merge-incoming-content
-  editor.selectionHighlightBackground: _merge-incoming-content
+  editor.selectionBackground:          _orange-fade-weak
+  editor.inactiveSelectionBackground:  _orange-fade-weak
+  editor.selectionHighlightBackground: _orange-fade-weak
   # Word highlight settings are used when the cursor is inside of a symbol and will
   # automatically highlight all other occurences of that symbol (with the option for
   # different colors for read vs write access of symbol). Note that this overrides
   # the selection background after double clicking a symbol to select, but not when
   # selecting with keyboard
-  # TODO: Make these more subtle, they're distracting
-  editor.wordHighlightBackground:       _light-orange-fade # During read access, like console.log
-  editor.wordHighlightStrongBackground: _light-pink-fade # During write access, like const =
+  editor.wordHighlightBackground:       _light-orange-fade # During read access
+  editor.wordHighlightStrongBackground: _light-pink-fade # During write access
   # Find match settings are triggered by current find/replace dialong in top right
-  editor.findMatchBackground:          _merge-current-header
-  editor.findMatchHighlightBackground: _merge-incoming-content
-  # editor.findRangeHighlightBackground: ??? What does this do ???
+  editor.findMatchBackground:          _purple-fade
+  editor.findMatchHighlightBackground: _orange-fade-weak
   # Currently active line background
-  editor.lineHighlightBackground: _seal
+  editor.lineHighlightBackground:  _gray
+  editor.hoverHighlightBackground: _blue-fade-weak
   # -----------------------------------------------------------------------------
   # Widgets
   # -----------------------------------------------------------------------------
   # Widgets are feautures inside the main editor like snippets, autocomplete, in
   # file find.
-  editorWidget.background: _very-dark-gray
+  editorWidget.background: _seal
   editorWidget.border:     _gray
   # This sets the background for suggestions complete currently selected element
   editorSuggestWidget.selectedBackground: _green-fade
@@ -92,18 +96,15 @@ colors:
   # -----------------------------------------------------------------------------
   # The overview ruler is the thin bar at the far right of the editor, it has
   # decorations for git status and linter warnings
-  editorOverviewRuler.border: _transparent
-  # editorOverviewRuler.findMatchForeground: TODO
-  # editorOverviewRuler.rangeHighlightForeground: TODO
-  # editorOverviewRuler.selectionHighlightForeground: TODO
-  # editorOverviewRuler.wordHighlightForeground: TODO
-  # editorOverviewRuler.wordHighlightStrongForeground: TODO
-  editorOverviewRuler.modifiedForeground: _git-modified
-  editorOverviewRuler.addedForeground:    _git-added
-  editorOverviewRuler.deletedForeground:  _git-removed
-  editorOverviewRuler.errorForeground:    _error
-  editorOverviewRuler.warningForeground:  _warning
-  editorOverviewRuler.infoForeground:     _info
+  editorOverviewRuler.border:                 _transparent
+  editorOverviewRuler.findMatchForeground:    _orange-fade-weak
+  editorOverviewRuler.bracketMatchForeground: _green-fade-weak
+  editorOverviewRuler.modifiedForeground:     _git-modified
+  editorOverviewRuler.addedForeground:        _git-added
+  editorOverviewRuler.deletedForeground:      _git-removed
+  editorOverviewRuler.errorForeground:        _error
+  editorOverviewRuler.warningForeground:      _warning
+  editorOverviewRuler.infoForeground:         _info
   # -----------------------------------------------------------------------------
   # Extensions
   # -----------------------------------------------------------------------------
@@ -118,6 +119,13 @@ colors:
   editorError.border:       _background-light
   editorWarning.foreground: _warning
   editorWarning.border:     _background-light
+  editorInfo.foreground:    _info
+  editorInfo.border:        _background-light
+  editorHint.foreground:    _hint
+  editorHint.border:        _background-light
+  problemsErrorIcon.foreground:   _error
+  problemsWarningIcon.foreground: _warning
+  problemsInfoIcon.foreground:    _info
   # -----------------------------------------------------------------------------
   # Git Gutters
   # -----------------------------------------------------------------------------
@@ -127,7 +135,10 @@ colors:
   # -----------------------------------------------------------------------------
   # Git Decoration
   # -----------------------------------------------------------------------------
-  gitDecoration.ignoredResourceForeground: _git-ignored
+  gitDecoration.ignoredResourceForeground:  _git-ignored
+  gitDecoration.addedResourceForeground:    _git-added
+  gitDecoration.modifiedResourceForeground: _git-modifed
+  gitDecoration.deletedResourceForeground:  _git-deleted
   # -----------------------------------------------------------------------------
   # List
   # -----------------------------------------------------------------------------
@@ -176,9 +187,6 @@ colors:
   statusBar.noFolderForeground:  _foreground
   statusBar.debuggingBackground: _purple
   statusBar.debuggingForeground: _foreground
-  # statusBar.border: NONE
-  # statusBarItem.prominentBackground: NONE
-  # statusBarItem.prominentHoverBackground: NONE
   # -----------------------------------------------------------------------------
   # Title Bar
   # -----------------------------------------------------------------------------
@@ -194,13 +202,11 @@ colors:
   tab.activeBorder:       _green
   tab.inactiveBackground: _background-dark
   tab.inactiveForeground: _foreground
-  # tab.unfocusedActiveBorder: NONE
   # -----------------------------------------------------------------------------
   # Terminal
   # -----------------------------------------------------------------------------
   terminalCursor.background:  _foreground
   terminalCursor.foreground:  _light-red
-  terminal.ansiBlue:          _blue
   terminal.ansiBrightBlack:   _light-gray
   terminal.ansiBrightBlue:    _light-blue
   terminal.ansiBrightCyan:    _light-purple
@@ -209,6 +215,7 @@ colors:
   terminal.ansiBrightRed:     _red
   terminal.ansiBrightWhite:   _foreground
   terminal.ansiBrightYellow:  _light-orange
+  terminal.ansiBlue:          _blue
   terminal.ansiCyan:          _purple
   terminal.ansiGreen:         _green
   terminal.ansiMagenta:       _pink

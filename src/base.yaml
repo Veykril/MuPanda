@@ -79,7 +79,7 @@ tokenColors:
 # Function parameters
 - scope: variable.parameter
   settings:
-    foreground: _variable-light-gray
+    foreground: _variable
 
 - scope: variable.other.constant, variable.language.this, variable.language.self
   settings:
