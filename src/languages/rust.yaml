@@ -6,7 +6,7 @@ tokenColors:
       foreground: _foreground
   - scope: storage.modifier.visibility, storage.modifier.mut, storage.modifier.dyn, storage.modifier.const
     settings:
-      foreground: _pink
+      foreground: _keyword
   # general attributes/macros
   - scope: entity.name.function.attribute, entity.name.function.macro
     settings:
@@ -34,30 +34,30 @@ tokenColors:
   # also colors the angle brackets, so just rely on semantic highlighting instead for this
   #- scope: meta.type_params
   #  settings:
-  #    foreground: _orange
+  #    foreground: _type
 semanticTokenColors:
   # todo, move the general ones to base.yaml
   formatSpecifier: _light-orange
-  string: _green
+  string: _string
   boolean: _light-pink
   # types
   selfType: _light-orange
-  type: _orange
-  typeAlias: _orange
+  type: _type
+  typeAlias: _type
   builtinType: _light-orange
-  struct: _orange
-  enum: _orange
-  union: _orange
-  enumMember: _blue
-  interface: _purple
+  struct: _type
+  enum: _type
+  union: _type
+  enumMember: _function
+  interface: _interface
   namespace: _foreground
   # generics
-  typeParameter: _orange
+  typeParameter: _type
   lifetime:
     foreground: _green
     fontStyle: italic
   # keywords
-  keyword: _pink
+  keyword: _keyword
   keyword.unsafe: 
     foreground: _red
     fontStyle: bold
@@ -76,7 +76,7 @@ semanticTokenColors:
     foreground: _foreground
     fontStyle: bold underline
   property: _foreground
-  function: _blue
+  function: _function
   function.unsafe:
     foreground: _red
     fontStyle: bold

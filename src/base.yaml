@@ -25,18 +25,18 @@ tokenColors:
 # Generic <keyword> matches
 - scope: keyword
   settings:
-    foreground: _pink
+    foreground: _keyword
 
 # Make operators light gray by default
 - scope: keyword.operator
   settings:
-    foreground: _very-light-gray
+    foreground: _operator
 
 # 1. Control flow operators
 # 2. `new` keyword
 - scope: keyword.control, keyword.operator.new
   settings:
-    foreground: _pink
+    foreground: _keyword
 
 # -----------------------------------------------------------------------------
 # Storage
@@ -44,11 +44,11 @@ tokenColors:
 # Generic <storage> matches
 - scope: storage, storage.type
   settings:
-    foreground: _pink
+    foreground: _keyword
 
 - scope: storage.modifier
   settings:
-    foreground: _pink
+    foreground: _keyword
 
 # -----------------------------------------------------------------------------
 # Constants
@@ -56,7 +56,7 @@ tokenColors:
 # Generic <constant> matches
 - scope: constant
   settings:
-    foreground: _orange
+    foreground: _type
 
 # true/false booleans, null, undefined
 - scope: constant.language
@@ -74,12 +74,12 @@ tokenColors:
 # Generic <variable> matches
 - scope: variable
   settings:
-    foreground: _very-light-gray
+    foreground: _variable
 
 # Function parameters
 - scope: variable.parameter
   settings:
-    foreground: _very-light-gray
+    foreground: _variable-light-gray
 
 - scope: variable.other.constant, variable.language.this, variable.language.self
   settings:
@@ -91,7 +91,7 @@ tokenColors:
 # Generic string match
 - scope: string
   settings:
-    foreground: _green
+    foreground: _string
 
 # -----------------------------------------------------------------------------
 # Entities
@@ -99,7 +99,7 @@ tokenColors:
 # Function names
 - scope: entity.name.function
   settings:
-    foreground: _blue
+    foreground: _function
 - scope: entity.name.type
   settings:
-    foreground: _orange
+    foreground: _type

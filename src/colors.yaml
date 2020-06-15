@@ -76,3 +76,12 @@ _git-ignored:   _light-gray
 _error:   _light-red
 _warning: _light-orange
 _info:    _light-blue
+
+# Generic Language Colors
+_keyword: _pink
+_type: _orange
+_string: _green
+_function: _blue
+_interface: _purple
+_variable: _very-light-gray
+_operator: _very-light-gray
