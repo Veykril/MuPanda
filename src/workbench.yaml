@@ -135,10 +135,11 @@ colors:
   # -----------------------------------------------------------------------------
   # Git Decoration
   # -----------------------------------------------------------------------------
-  gitDecoration.ignoredResourceForeground:  _git-ignored
-  gitDecoration.addedResourceForeground:    _git-added
-  gitDecoration.modifiedResourceForeground: _git-modifed
-  gitDecoration.deletedResourceForeground:  _git-deleted
+  gitDecoration.ignoredResourceForeground:   _git-ignored
+  gitDecoration.addedResourceForeground:     _git-added
+  gitDecoration.modifiedResourceForeground:  _git-modified
+  gitDecoration.deletedResourceForeground:   _git-deleted
+  gitDecoration.untrackedResourceForeground: _git-untracked
   # -----------------------------------------------------------------------------
   # List
   # -----------------------------------------------------------------------------

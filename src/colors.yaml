@@ -71,9 +71,10 @@ _border:                 _charcoal
 
 # Git Colors
 _git-modified:  _light-orange
-_git-added:     _green
-_git-removed:   _light-red
+_git-added:     _light-green
+_git-deleted:   _light-red
 _git-ignored:   _light-gray
+_git-untracked: _light-purple
 
 # Linter Colors
 _error:   _light-red
