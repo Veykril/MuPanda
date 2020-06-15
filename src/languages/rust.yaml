@@ -82,4 +82,4 @@ semanticTokenColors:
     fontStyle: bold
   function.attribute: _light-blue
   macro: _light-blue
-  attribute: _contrast-_foreground
+  attribute: _foreground
