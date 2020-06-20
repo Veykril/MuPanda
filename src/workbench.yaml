@@ -101,7 +101,7 @@ colors:
   editorOverviewRuler.bracketMatchForeground: _green-fade-weak
   editorOverviewRuler.modifiedForeground:     _git-modified
   editorOverviewRuler.addedForeground:        _git-added
-  editorOverviewRuler.deletedForeground:      _git-removed
+  editorOverviewRuler.deletedForeground:      _git-deleted
   editorOverviewRuler.errorForeground:        _error
   editorOverviewRuler.warningForeground:      _warning
   editorOverviewRuler.infoForeground:         _info
@@ -131,7 +131,7 @@ colors:
   # -----------------------------------------------------------------------------
   editorGutter.modifiedBackground: _git-modified
   editorGutter.addedBackground:    _git-added
-  editorGutter.deletedBackground:  _git-removed
+  editorGutter.deletedBackground:  _git-deleted
   # -----------------------------------------------------------------------------
   # Git Decoration
   # -----------------------------------------------------------------------------
