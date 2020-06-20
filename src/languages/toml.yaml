@@ -1,0 +1,10 @@
+tokenColors:
+- scope: entity.other.attribute-name.table.toml
+  settings:
+    foreground: _purple
+- scope: keyword.key.toml
+  settings:
+    foreground: _foreground
+- scope: invalid.deprecated.noValueGiven.toml
+  settings:
+    foreground: _error
