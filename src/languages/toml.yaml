@@ -8,3 +8,6 @@ tokenColors:
 - scope: invalid.deprecated.noValueGiven.toml
   settings:
     foreground: _error
+- scope: constant.other.boolean.toml
+  settings:
+    foreground: _light-pink
