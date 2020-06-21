@@ -2,6 +2,10 @@ tokenColors:
 - scope: entity.other.attribute-name.table.toml
   settings:
     foreground: _purple
+- scope: entity.other.attribute-name.table.array.toml
+  settings:
+    foreground: _purple
+    fontStyle: italic
 - scope: keyword.key.toml
   settings:
     foreground: _font-primary
