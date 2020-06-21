@@ -3,6 +3,7 @@ author: Siamak Mokhtari, Modified by Lukas Wirth
 name: Panda Syntax – Beta
 colorSpaceName: sRGB
 semanticClass: theme.dark.mu_panda
+semanticHighlighting: true
 tokenColors:
 
 # -----------------------------------------------------------------------------
