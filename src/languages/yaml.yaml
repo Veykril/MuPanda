@@ -1,4 +1,4 @@
 tokenColors:
 - scope: entity.name.tag.yaml
   settings:
-    foreground: _foreground
+    foreground: _font-primary

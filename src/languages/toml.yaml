@@ -4,7 +4,7 @@ tokenColors:
     foreground: _purple
 - scope: keyword.key.toml
   settings:
-    foreground: _foreground
+    foreground: _font-primary
 - scope: invalid.deprecated.noValueGiven.toml
   settings:
     foreground: _error

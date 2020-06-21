@@ -1,4 +1,4 @@
 tokenColors:
 - scope: support.type.property-name.json.comments
   settings:
-    foreground: _foreground
+    foreground: _font-primary

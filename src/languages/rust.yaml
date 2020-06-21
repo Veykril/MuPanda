@@ -3,7 +3,7 @@ tokenColors:
   # &, ::, =>, etc.
   - scope: keyword.operator.misc, keyword.operator.sigil
     settings:
-      foreground: _foreground
+      foreground: _font-primary
   - scope: storage.modifier.visibility, storage.modifier.mut, storage.modifier.dyn, storage.modifier.const
     settings:
       foreground: _keyword
@@ -50,7 +50,7 @@ semanticTokenColors:
   union: _type
   enumMember: _function
   interface: _interface
-  namespace: _foreground
+  namespace: _font-primary
   # generics
   typeParameter: _type
   lifetime:
@@ -62,24 +62,24 @@ semanticTokenColors:
     foreground: _red
     fontStyle: bold
   selfKeyword: _light-pink
-  variable: _foreground
+  variable: _font-primary
   variable.mutable:
-    foreground: _foreground
+    foreground: _font-primary
     fontStyle: underline
   variable.const:
-    foreground: _foreground
+    foreground: _font-primary
     fontStyle: bold
   variable.static:
-    foreground: _foreground
+    foreground: _font-primary
     fontStyle: bold
   variable.static.mutable:
-    foreground: _foreground
+    foreground: _font-primary
     fontStyle: bold underline
-  property: _foreground
+  property: _font-primary
   function: _function
   function.unsafe:
     foreground: _red
     fontStyle: bold
   function.attribute: _light-blue
   macro: _light-blue
-  attribute: _foreground
+  attribute: _font-primary
