@@ -40,6 +40,9 @@ semanticTokenColors:
   formatSpecifier: _light-orange
   string: _string
   boolean: _light-pink
+  comment.documentation:
+    foreground: _green
+    fontStyle: italic
   # types
   selfType: _light-orange
   type: _type
