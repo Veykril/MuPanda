@@ -37,55 +37,22 @@ tokenColors:
   #    foreground: _type
    #   fontStyle: bold
 semanticTokenColors:
-  # todo, move the general ones to base.yaml
-  formatSpecifier: _light-orange
-  string: _string
-  boolean: _light-pink
-  comment.documentation:
-    foreground: _green
-    fontStyle: italic
-  # types
   selfType: _light-orange
-  type: _type
+  selfKeyword: _light-pink
   typeAlias: _type
   builtinType: _light-orange
-  struct: _type
-  enum: _type
-  union: _type
   enumMember: _function
-  interface: _interface
-  namespace: _font-primary
-  # generics
-  typeParameter:
-    foreground: _type
-    fontStyle: bold
   lifetime:
     foreground: _green
     fontStyle: italic
-  # keywords
-  keyword: _keyword
-  keyword.unsafe: 
+  # modifiers
+  '*.unsafe': 
     foreground: _red
     fontStyle: bold
-  selfKeyword: _light-pink
-  variable: _font-primary
   variable.mutable:
     foreground: _font-primary
     fontStyle: underline
-  variable.const:
-    foreground: _font-primary
-    fontStyle: bold
-  variable.static:
-    foreground: _font-primary
-    fontStyle: bold
   variable.static.mutable:
     foreground: _font-primary
     fontStyle: bold underline
-  property: _font-primary
-  function: _function
-  function.unsafe:
-    foreground: _red
-    fontStyle: bold
   function.attribute: _light-blue
-  macro: _light-blue
-  attribute: _font-primary

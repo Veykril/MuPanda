@@ -104,3 +104,42 @@ tokenColors:
 - scope: entity.name.type
   settings:
     foreground: _type
+
+semanticTokenColors:
+  formatSpecifier: _light-orange
+  string: _string
+  boolean: _light-pink
+  number: _type
+
+  comment: _light-midnight
+  comment.documentation:
+    foreground: _green
+    fontStyle: italic
+
+  interface: _interface
+  namespace: _font-primary
+
+  keyword: _keyword
+  operator: _operator
+  
+  struct: _type
+  enum: _type
+  union: _type
+  type: _type
+  typeParameter:
+    foreground: _type
+    fontStyle: bold
+
+  function: _function
+  macro: _light-blue
+  attribute: _font-primary
+
+  property: _font-primary
+  parameter: _font-primary
+  variable: _font-primary
+  variable.const:
+    foreground: _font-primary
+    fontStyle: bold
+  variable.static:
+    foreground: _font-primary
+    fontStyle: bold

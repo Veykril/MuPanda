@@ -2,6 +2,8 @@ import * as yaml from "https://deno.land/std/encoding/yaml.ts";
 
 type MappedObject = { [key: string]: string };
 
+const BLACK = "#000000";
+
 interface Base {
   tokenColors: TokenColor[];
   semanticTokenColors: SemanticTokenColors;
@@ -66,7 +68,6 @@ for (let property in theme_colors) {
 
 // Base includes general language syntax tokens
 const base = parse_yaml<Base>("src/base.yaml");
-if (!base.semanticTokenColors) base.semanticTokenColors = {};
 
 // VSCode workbench theme definitions
 const workbench = parse_yaml<Workbench>("src/workbench.yaml");
@@ -111,8 +112,9 @@ for (const property in res.colors) {
     res.colors[property] = color;
   } else {
     console.warn(
-      `Unknown color key ${color_key}`,
+      `Unknown color key ${color_key}, placing black(${BLACK})`,
     );
+    res.colors[property] = BLACK;
   }
 }
 /// resolve tokencolors
@@ -126,8 +128,9 @@ for (const token_color of res.tokenColors) {
       settings.foreground = color;
     } else {
       console.warn(
-        `Unknown color key ${color_key}`,
+        `Unknown color key ${color_key}, placing black(${BLACK})`,
       );
+      settings.foreground = BLACK;
     }
   }
 }
@@ -140,8 +143,9 @@ for (const property in res.semanticTokenColors) {
       res.semanticTokenColors[property] = color;
     } else {
       console.warn(
-        `Unknown color key ${color_key}`,
+        `Unknown color key ${color_key}, placing black(${BLACK})`,
       );
+      res.semanticTokenColors[property] = BLACK;
     }
   } else if (!!color_key.foreground) {
     const color = theme_colors[color_key.foreground];
@@ -149,8 +153,9 @@ for (const property in res.semanticTokenColors) {
       color_key.foreground = color;
     } else {
       console.warn(
-        `Unknown color key ${color_key.foreground}`,
+        `Unknown color key ${color_key}, placing black(${BLACK})`,
       );
+      color_key.foreground = BLACK;
     }
   }
 }
