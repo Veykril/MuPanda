@@ -88,6 +88,7 @@ _keyword: _pink
 _keyword-special: _light-pink
 
 _type: _orange
+_type-special: _light-orange
 _literal: _orange
 _interpolation: _light-orange
 

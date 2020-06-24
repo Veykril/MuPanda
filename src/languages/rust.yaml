@@ -10,40 +10,40 @@ tokenColors:
   # general attributes/macros
   - scope: entity.name.function.attribute, entity.name.function.macro
     settings:
-      foreground: _light-blue
+      foreground: _function-special
   - scope: comment.block.documentation, comment.line.documentation
     settings:
-      foreground: _green
+      foreground: _comment-doc
       fontStyle: italic
   # lifetime
   - scope: storage.modifier.lifetime
     settings:
-      foreground: _green
+      foreground: _string
       fontStyle: italic
   # self/box
   - scope: variable.language, storage.modifier.box
     settings:
-      foreground: _light-pink
+      foreground: _keyword-special
   - scope: keyword.other.unsafe
     settings:
       foreground: _red
       fontStyle: bold
   - scope: support.type.primitive
     settings:
-      foreground: _light-orange
+      foreground: _type-special
   # also colors the angle brackets, so just rely on semantic highlighting instead for this
   #- scope: meta.type_params
   #  settings:
   #    foreground: _type
    #   fontStyle: bold
 semanticTokenColors:
-  selfType: _light-orange
-  selfKeyword: _light-pink
+  selfType: _type-special
+  selfKeyword: _keyword-special
   typeAlias: _type
-  builtinType: _light-orange
+  builtinType: _type-special
   enumMember: _function
   lifetime:
-    foreground: _green
+    foreground: _string
     fontStyle: italic
   # modifiers
   '*.unsafe': 
@@ -55,6 +55,6 @@ semanticTokenColors:
   variable.static.mutable:
     foreground: _font-primary
     fontStyle: bold underline
-  function.attribute: _light-blue
+  function.attribute: _function-special
 colors:
   'rust_analyzer.inlayHint': _lighter-gray-fade
