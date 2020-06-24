@@ -35,6 +35,7 @@ tokenColors:
   #- scope: meta.type_params
   #  settings:
   #    foreground: _type
+   #   fontStyle: bold
 semanticTokenColors:
   # todo, move the general ones to base.yaml
   formatSpecifier: _light-orange
@@ -55,7 +56,9 @@ semanticTokenColors:
   interface: _interface
   namespace: _font-primary
   # generics
-  typeParameter: _type
+  typeParameter:
+    foreground: _type
+    fontStyle: bold
   lifetime:
     foreground: _green
     fontStyle: italic
