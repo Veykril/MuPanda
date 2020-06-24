@@ -42,11 +42,15 @@ function parse_yaml_opt<T extends object>(
 
 function parse_yaml<T extends object>(path: string): T {
   const val = parse_yaml_opt<T>(path);
-  if (val != undefined) {
+  if (!!val) {
     return val;
   } else {
     throw `Couldn't parse ${path}`;
   }
+}
+
+function warn_color(color_key: string) {
+  console.warn(`Unknown color key ${color_key}, placing black(${BLACK})`);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -82,32 +86,33 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
   const lang = parse_yaml_opt<LangExt>(
     `./src/languages/${lang_name}`,
   );
-  if (lang != undefined) {
-    if (lang.langKey != undefined) {
-      const lang_key = "." + lang.langKey;
-      lang.tokenColors.forEach((token_color) => {
-        const scopes = token_color.scope.split(",").map((scope) =>
-          scope + lang_key
-        );
-        token_color.scope = scopes.join(",");
-      });
-    }
-    console.info(`Adding language ${lang_name}`);
-    if (!!lang.tokenColors) {
-      res.tokenColors = res.tokenColors.concat(lang.tokenColors);
-    }
-    if (!!lang.semanticTokenColors) {
-      res.semanticTokenColors = {
-        ...res.semanticTokenColors,
-        ...lang.semanticTokenColors,
-      };
-    }
-    if (!!lang.colors) {
-      res.colors = {
-        ...res.colors,
-        ...lang.colors,
-      };
-    }
+  if (!lang) {
+    continue;
+  }
+  // append .lang_key to all textmate scopes if it exists
+  if (!!lang.langKey) {
+    const lang_key = "." + lang.langKey;
+    lang.tokenColors.forEach((token_color) => {
+      token_color.scope = token_color.scope.split(",").map((scope) =>
+        scope + lang_key
+      ).join(",");
+    });
+  }
+  console.info(`Adding language ${lang_name}`);
+  if (!!lang.tokenColors) {
+    res.tokenColors = res.tokenColors.concat(lang.tokenColors);
+  }
+  if (!!lang.semanticTokenColors) {
+    res.semanticTokenColors = {
+      ...res.semanticTokenColors,
+      ...lang.semanticTokenColors,
+    };
+  }
+  if (!!lang.colors) {
+    res.colors = {
+      ...res.colors,
+      ...lang.colors,
+    };
   }
 }
 /// resolve colors
@@ -115,12 +120,10 @@ for (const property in res.colors) {
   const color_key = res.colors[property];
 
   const color = theme_colors[color_key];
-  if (color != undefined) {
+  if (!!color) {
     res.colors[property] = color;
   } else {
-    console.warn(
-      `Unknown color key ${color_key}, placing black(${BLACK})`,
-    );
+    warn_color(color_key);
     res.colors[property] = BLACK;
   }
 }
@@ -129,14 +132,12 @@ for (const token_color of res.tokenColors) {
   const settings = token_color.settings;
   const color_key = settings.foreground;
 
-  if (color_key != undefined) {
+  if (!!color_key) {
     const color = theme_colors[color_key];
-    if (color != undefined) {
+    if (!!color) {
       settings.foreground = color;
     } else {
-      console.warn(
-        `Unknown color key ${color_key}, placing black(${BLACK})`,
-      );
+      warn_color(color_key);
       settings.foreground = BLACK;
     }
   }
@@ -145,23 +146,21 @@ for (const token_color of res.tokenColors) {
 for (const property in res.semanticTokenColors) {
   const color_key = res.semanticTokenColors[property];
   if (typeof (color_key) === "string") {
+    // Color is just a foreground color
     const color = theme_colors[color_key];
-    if (color != undefined) {
+    if (!!color) {
       res.semanticTokenColors[property] = color;
     } else {
-      console.warn(
-        `Unknown color key ${color_key}, placing black(${BLACK})`,
-      );
+      warn_color(color_key);
       res.semanticTokenColors[property] = BLACK;
     }
   } else if (!!color_key.foreground) {
+    // Color is specified as an object
     const color = theme_colors[color_key.foreground];
-    if (color != undefined) {
+    if (!!color) {
       color_key.foreground = color;
     } else {
-      console.warn(
-        `Unknown color key ${color_key}, placing black(${BLACK})`,
-      );
+      warn_color(color_key.foreground);
       color_key.foreground = BLACK;
     }
   }
