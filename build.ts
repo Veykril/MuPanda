@@ -27,6 +27,7 @@ interface LangExt {
   langKey?: string;
   tokenColors: TokenColor[];
   semanticTokenColors?: SemanticTokenColors;
+  colors?: MappedObject;
 }
 
 interface SemanticTokenColors {
@@ -99,6 +100,12 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
       res.semanticTokenColors = {
         ...res.semanticTokenColors,
         ...lang.semanticTokenColors,
+      };
+    }
+    if (!!lang.colors) {
+      res.colors = {
+        ...res.colors,
+        ...lang.colors,
       };
     }
   }

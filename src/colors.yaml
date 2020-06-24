@@ -6,19 +6,19 @@ _transparent:            '#00000000'
 # -----------------------------------------------------------------------------
 # Gray Scale
 # -----------------------------------------------------------------------------
-_very-light-gray:      '#E6E6E6'
-_very-light-gray-fade: '#FFFFFF'
-_lighter-gray:         '#CDCDCD'
-_lighter-gray-fade:    '#CDCDCD30'
-_contrast-gray:        '#BBBBBB'
-_light-gray:           '#757575'
-_light-midnight:       '#676B79'
-_steel-gray:           '#3E4250'
-_gray:                 '#373B41'
-_gray-fade:            '#373B4199'
-_seal:                 '#292A2B'
-_very-dark-gray:       '#242526'
-_charcoal:             '#222223' 
+_very-light-gray:   '#E6E6E6'
+_lighter-gray:      '#CDCDCD'
+_lighter-gray-fade: '#CDCDCD99'
+_contrast-gray:     '#BBBBBB'
+_light-gray:        '#757575'
+_light-midnight:    '#676B79'
+_steel-gray:        '#3E4250'
+_gray:              '#373B41'
+_gray-fade:         '#373B4199'
+_seal:              '#292A2B'
+_very-dark-gray:    '#242526'
+_charcoal:          '#222223' 
+_white:             '#FFFFFF'
 
 # -----------------------------------------------------------------------------
 # Blue+Purple+Green

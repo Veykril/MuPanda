@@ -31,7 +31,7 @@ colors:
   # Buttons
   # -----------------------------------------------------------------------------
   button.background:      _blue
-  button.foreground:      _very-light-gray-fade
+  button.foreground:      _white
   button.hoverBackground: _light-midnight
   checkbox.border:        _blue
   # -----------------------------------------------------------------------------
@@ -108,7 +108,7 @@ colors:
   # -----------------------------------------------------------------------------
   # Extensions
   # -----------------------------------------------------------------------------
-  extensionButton.prominentForeground:      _very-light-gray-fade
+  extensionButton.prominentForeground:      _white
   extensionButton.prominentBackground:      _blue
   extensionButton.prominentHoverBackground: _light-midnight
   # -----------------------------------------------------------------------------

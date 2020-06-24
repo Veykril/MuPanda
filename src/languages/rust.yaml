@@ -56,3 +56,5 @@ semanticTokenColors:
     foreground: _font-primary
     fontStyle: bold underline
   function.attribute: _light-blue
+colors:
+  'rust_analyzer.inlayHint': _lighter-gray-fade
