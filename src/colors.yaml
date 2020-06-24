@@ -82,11 +82,26 @@ _warning: _light-orange
 _info:    _light-blue
 _hint:    _light-orange
 
-# Generic Language Colors
+# Generic Language Element Colors
+
 _keyword: _pink
+_keyword-special: _light-pink
+
 _type: _orange
+_literal: _orange
+_interpolation: _light-orange
+
 _string: _green
+_string-special: _light-green
+_comment-doc: _green
+
 _function: _blue
+_function-special: _light-blue
+
 _interface: _purple
-_variable: _very-light-gray
-_operator: _very-light-gray
+
+_variable: _font-primary
+_operator: _font-primary
+_namespace: _font-primary
+
+_comment: _light-midnight

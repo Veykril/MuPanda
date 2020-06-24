@@ -12,12 +12,12 @@ tokenColors:
 # Generic <comment> matches
 - scope: comment
   settings:
-    foreground: _light-midnight
+    foreground: _comment
     fontStyle: italic
 
 - scope: comment.block
   settings:
-    foreground: _light-midnight
+    foreground: _comment
     fontStyle: italic
 
 # -----------------------------------------------------------------------------
@@ -62,12 +62,12 @@ tokenColors:
 # true/false booleans, null, undefined
 - scope: constant.language
   settings:
-    foreground: _light-pink
+    foreground: _keyword-special
 
 # Regex, string escape `\`
 - scope: constant.character.escape
   settings:
-    foreground: _light-green
+    foreground: _string-special
 
 # -----------------------------------------------------------------------------
 # Variables && Parameters
@@ -84,7 +84,7 @@ tokenColors:
 
 - scope: variable.other.constant, variable.language.this, variable.language.self
   settings:
-    foreground: _light-pink
+    foreground: _keyword-special
 
 # -----------------------------------------------------------------------------
 # Strings
@@ -106,18 +106,18 @@ tokenColors:
     foreground: _type
 
 semanticTokenColors:
-  formatSpecifier: _light-orange
+  formatSpecifier: _interpolation
   string: _string
-  boolean: _light-pink
-  number: _type
+  boolean: _keyword-special
+  number: _literal
 
   comment: _light-midnight
   comment.documentation:
-    foreground: _green
+    foreground: _comment-doc
     fontStyle: italic
 
   interface: _interface
-  namespace: _font-primary
+  namespace: _namespace
 
   keyword: _keyword
   operator: _operator
@@ -131,7 +131,7 @@ semanticTokenColors:
     fontStyle: bold
 
   function: _function
-  macro: _light-blue
+  macro: _function-special
   attribute: _font-primary
 
   property: _font-primary
