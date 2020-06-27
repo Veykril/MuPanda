@@ -1,0 +1,12 @@
+langKey: rust
+tokenColors:
+  - scope: support.type.primitive, support.type.builtin
+    settings:
+      foreground: _type-special
+
+  - scope: meta.template.expression
+    settings:
+      foreground: _interpolation
+  - scope: keyword.operator.expression.typeof, keyword.operator.expression.in
+    settings:
+      foreground: _keyword
