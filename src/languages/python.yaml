@@ -1,0 +1,24 @@
+langKey: python
+tokenColors:
+  - scope: keyword.operator.logical
+    settings:
+      foreground: _keyword
+  - scope: variable.language.special.self
+    settings:
+      foreground: _keyword-special
+  - scope: meta.function-call.generic
+    settings:
+      foreground: _function
+  - scope: support.function.magic
+    settings:
+      foreground: _function-special
+  - scope: support.function.builtin
+    settings:
+      foreground: _function-special
+  - scope: punctuation.definition.decorator, meta.function.decorator
+    settings:
+      foreground: _function-special
+  - scope: support.type.exception
+    settings:
+      foreground: _type
+      
