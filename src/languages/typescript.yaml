@@ -1,4 +1,4 @@
-langKey: rust
+langKey: ts
 tokenColors:
   - scope: support.type.primitive, support.type.builtin
     settings:
