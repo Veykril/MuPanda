@@ -12,6 +12,7 @@ tokenColors:
       foreground: _keyword
 semanticTokenColors:
   variable.readonly:
+    foreground: _font-primary
     fontStyle: ""
   variable:
     fontStyle: underline
