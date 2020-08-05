@@ -107,6 +107,13 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
   }
   res.tokenColors = res.tokenColors.concat(lang.tokenColors);
   if (!!lang.semanticTokenColors) {
+    for (const prop in lang.semanticTokenColors) {
+      if (prop in res.semanticTokenColors) {
+        console.warn(
+          `Overwriting a semanticTokenColor that is already defined: ${prop}`,
+        );
+      }
+    }
     res.semanticTokenColors = {
       ...res.semanticTokenColors,
       ...lang.semanticTokenColors,
