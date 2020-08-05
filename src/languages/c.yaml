@@ -1,0 +1,9 @@
+langKey: c
+tokenColors:
+  - scope: storage.type.built-in.primitive
+    settings:
+      foreground: _type-special
+  # for brackets in types like: int foo[]
+  - scope: storage.modifier.array.bracket.square
+    settings:
+      foreground: _font-primary
