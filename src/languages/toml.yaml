@@ -14,4 +14,4 @@ tokenColors:
     foreground: _error
 - scope: constant.other.boolean.toml
   settings:
-    foreground: _light-pink
+    foreground: _keyword-special

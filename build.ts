@@ -36,17 +36,22 @@ interface SemanticTokenColors {
 
 function parse_yaml_opt<T extends object>(
   path: string,
-): T | undefined {
-  return yaml.parse(Deno.readTextFileSync(path)) as T;
+): T | null {
+  try {
+    return parse_yaml<T>(path);
+  } catch (e) {
+    console.info(`Couldn't parse ${path}: ${e}`);
+    return null;
+  }
 }
 
 function parse_yaml<T extends object>(path: string): T {
-  const val = parse_yaml_opt<T>(path);
-  if (!!val) {
-    return val;
-  } else {
-    throw `Couldn't parse ${path}`;
-  }
+  return yaml.parse(Deno.readTextFileSync(path)) as T;
+}
+
+// we need this cause there is no cast that checks properties ...
+function verifyLang(lang: LangExt | null): lang is LangExt {
+  return !!lang && !!lang.tokenColors;
 }
 
 function warn_color(color_key: string) {
@@ -66,7 +71,7 @@ for (let property in theme_colors) {
   const color_key = theme_colors[property];
 
   const color = theme_colors[color_key];
-  if (color != undefined) {
+  if (color) {
     theme_colors[property] = color;
   }
 }
@@ -80,11 +85,6 @@ const workbench = parse_yaml<Workbench>("src/workbench.yaml");
 // Merge workbench styles
 const res = { ...base, ...workbench };
 
-// we need this cause there is no cast that checks properties ...
-function verifyLang(lang: LangExt | undefined): lang is LangExt {
-  return !!lang && !!lang.tokenColors;
-}
-
 /// append lang colors
 for (const dirEntry of Deno.readDirSync("./src/languages")) {
   const lang_name = dirEntry.name;
@@ -97,7 +97,7 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
   }
   console.info(`Adding language ${lang_name}`);
   // append .lang_key to all textmate scopes if it exists
-  if (!!lang.langKey) {
+  if (lang.langKey) {
     const lang_key = "." + lang.langKey;
     lang.tokenColors.forEach((token_color) => {
       token_color.scope = token_color.scope.split(",").map((scope) =>
@@ -106,7 +106,7 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
     });
   }
   res.tokenColors = res.tokenColors.concat(lang.tokenColors);
-  if (!!lang.semanticTokenColors) {
+  if (lang.semanticTokenColors) {
     for (const prop in lang.semanticTokenColors) {
       if (prop in res.semanticTokenColors) {
         console.warn(
@@ -119,7 +119,7 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
       ...lang.semanticTokenColors,
     };
   }
-  if (!!lang.colors) {
+  if (lang.colors) {
     res.colors = {
       ...res.colors,
       ...lang.colors,
@@ -131,7 +131,7 @@ for (const property in res.colors) {
   const color_key = res.colors[property];
 
   const color = theme_colors[color_key];
-  if (!!color) {
+  if (color) {
     res.colors[property] = color;
   } else {
     warn_color(color_key);
@@ -143,9 +143,9 @@ for (const token_color of res.tokenColors) {
   const settings = token_color.settings;
   const color_key = settings.foreground;
 
-  if (!!color_key) {
+  if (color_key) {
     const color = theme_colors[color_key];
-    if (!!color) {
+    if (color) {
       settings.foreground = color;
     } else {
       warn_color(color_key);
@@ -159,16 +159,16 @@ for (const property in res.semanticTokenColors) {
   if (typeof (color_key) === "string") {
     // Color is just a foreground color
     const color = theme_colors[color_key];
-    if (!!color) {
+    if (color) {
       res.semanticTokenColors[property] = color;
     } else {
       warn_color(color_key);
       res.semanticTokenColors[property] = BLACK;
     }
-  } else if (!!color_key.foreground) {
+  } else if (color_key.foreground) {
     // Color is specified as an object
     const color = theme_colors[color_key.foreground];
-    if (!!color) {
+    if (color) {
       color_key.foreground = color;
     } else {
       warn_color(color_key.foreground);
