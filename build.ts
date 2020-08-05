@@ -80,15 +80,22 @@ const workbench = parse_yaml<Workbench>("src/workbench.yaml");
 // Merge workbench styles
 const res = { ...base, ...workbench };
 
+// we need this cause there is no cast that checks properties ...
+function verifyLang(lang: LangExt | undefined): lang is LangExt {
+  return !!lang && !!lang.tokenColors;
+}
+
 /// append lang colors
 for (const dirEntry of Deno.readDirSync("./src/languages")) {
   const lang_name = dirEntry.name;
   const lang = parse_yaml_opt<LangExt>(
     `./src/languages/${lang_name}`,
   );
-  if (!lang) {
+  if (!verifyLang(lang)) {
+    console.info(`Skipping invalid language ${lang_name}`);
     continue;
   }
+  console.info(`Adding language ${lang_name}`);
   // append .lang_key to all textmate scopes if it exists
   if (!!lang.langKey) {
     const lang_key = "." + lang.langKey;
@@ -98,10 +105,7 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
       ).join(",");
     });
   }
-  console.info(`Adding language ${lang_name}`);
-  if (!!lang.tokenColors) {
-    res.tokenColors = res.tokenColors.concat(lang.tokenColors);
-  }
+  res.tokenColors = res.tokenColors.concat(lang.tokenColors);
   if (!!lang.semanticTokenColors) {
     res.semanticTokenColors = {
       ...res.semanticTokenColors,
