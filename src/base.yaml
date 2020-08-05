@@ -143,3 +143,6 @@ semanticTokenColors:
   variable.static:
     foreground: _font-primary
     fontStyle: bold
+  variable.global:
+    foreground: _font-primary
+    fontStyle: bold
