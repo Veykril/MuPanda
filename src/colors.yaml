@@ -60,7 +60,7 @@ _light-pink-fade:   '#FF9AC170'
 _background-dark:        _very-dark-gray
 _background-light:       _seal
 _foreground:             _very-light-gray
-_diff-green:             _green-fade
+_diff-green:             _green-fade-weak
 _diff-red:               _light-red-fade
 _merge-current-header:   _purple-fade
 _merge-current-content:  _purple-fade-weak
