@@ -51,7 +51,11 @@ semanticTokenColors:
     fontStyle: bold
   '*.mutable':
     fontStyle: underline
-  variable.static.mutable:
-    fontStyle: bold underline
   function.attribute: _function-special
-  
+  # needs to be specified seperately due to the use of variable.static
+  variable.static.mutable:
+    fontStyle: underline bold
+  # statics are only unsafe when they are mutable
+  variable.static.mutable.unsafe:
+    foreground: _red
+    fontStyle: underline bold
