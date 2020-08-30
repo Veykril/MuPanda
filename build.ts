@@ -13,6 +13,10 @@ interface Workbench {
   colors: MappedObject;
 }
 
+interface PluginExt {
+  colors: MappedObject;
+}
+
 interface TokenColor {
   scope: string;
   settings: ColorSettings;
@@ -27,7 +31,6 @@ interface LangExt {
   langKey?: string;
   tokenColors: TokenColor[];
   semanticTokenColors?: SemanticTokenColors;
-  colors?: MappedObject;
 }
 
 interface SemanticTokenColors {
@@ -119,13 +122,25 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
       ...lang.semanticTokenColors,
     };
   }
-  if (lang.colors) {
-    res.colors = {
-      ...res.colors,
-      ...lang.colors,
-    };
-  }
 }
+
+/// append plugin colors
+for (const dirEntry of Deno.readDirSync("./src/plugins")) {
+  const plugin_name = dirEntry.name;
+  const plugin = parse_yaml_opt<PluginExt>(
+    `./src/plugins/${plugin_name}`,
+  );
+  if (!plugin || !plugin.colors) {
+    console.info(`Skipping invalid plugin ${plugin_name}`);
+    continue;
+  }
+  console.info(`Adding plugin ${plugin_name}`);
+  res.colors = {
+    ...res.colors,
+    ...plugin.colors,
+  };
+}
+
 /// resolve colors
 for (const property in res.colors) {
   const color_key = res.colors[property];

@@ -54,5 +54,4 @@ semanticTokenColors:
   variable.static.mutable:
     fontStyle: bold underline
   function.attribute: _function-special
-colors:
-  'rust_analyzer.inlayHint': _lighter-gray-fade
+  
