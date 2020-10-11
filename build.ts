@@ -99,14 +99,23 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
     continue;
   }
   console.info(`Adding language ${lang_name}`);
-  // append .lang_key to all textmate scopes if it exists
   if (lang.langKey) {
-    const lang_key = "." + lang.langKey;
+    // append .lang_key to all textmate scopes
+    const tm_suffix = "." + lang.langKey;
     lang.tokenColors.forEach((token_color) => {
       token_color.scope = token_color.scope.split(",").map((scope) =>
-        scope + lang_key
+        scope + tm_suffix
       ).join(",");
     });
+    const sem_suffix = ":" + lang.langKey;
+    // append .lang_key to all semantic token colors if they exists
+    if (lang.semanticTokenColors) {
+      let remapped: SemanticTokenColors = {};
+      for (const prop in lang.semanticTokenColors) {
+        remapped[prop + sem_suffix] = lang.semanticTokenColors[prop];
+      }
+      lang.semanticTokenColors = remapped;
+    }
   }
   res.tokenColors = res.tokenColors.concat(lang.tokenColors);
   if (lang.semanticTokenColors) {
