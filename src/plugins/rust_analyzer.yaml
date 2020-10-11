@@ -1,7 +1,5 @@
 colors:
-  'rust_analyzer.inlayHint': _lighter-gray-fade
-  # 'rust_analyzer.inlayHints.foreground': _lighter-gray-fade
-  # 'rust_analyzer.inlayHints.background': _lighter-gray-fade
-  # 'rust_analyzer.inlayHints.foreground.typeHints': _lighter-gray-fade
-  # 'rust_analyzer.inlayHints.foreground.paramHints': _lighter-gray-fade
-  # 'rust_analyzer.inlayHints.background.chainingHints': _lighter-gray-fade
+  'rust_analyzer.inlayHints.foreground': _lighter-gray-fade
+  'rust_analyzer.inlayHints.foreground.typeHints': _lighter-gray-fade
+  'rust_analyzer.inlayHints.foreground.paramHints': _lighter-gray-fade
+  'rust_analyzer.inlayHints.background.chainingHints': _lighter-gray-fade
