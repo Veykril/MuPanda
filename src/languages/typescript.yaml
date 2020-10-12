@@ -1,4 +1,5 @@
 langKey: ts
+semLangKey: typescript
 tokenColors:
   - scope: support.type.primitive, support.type.builtin
     settings:

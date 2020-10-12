@@ -29,6 +29,7 @@ interface ColorSettings {
 
 interface LangExt {
   langKey?: string;
+  semLangKey?: string;
   tokenColors: TokenColor[];
   semanticTokenColors?: SemanticTokenColors;
 }
@@ -107,7 +108,7 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
         scope + tm_suffix
       ).join(",");
     });
-    const sem_suffix = ":" + lang.langKey;
+    const sem_suffix = ":" + (lang.semLangKey || lang.langKey);
     // append .lang_key to all semantic token colors if they exists
     if (lang.semanticTokenColors) {
       let remapped: SemanticTokenColors = {};
