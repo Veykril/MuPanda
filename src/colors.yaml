@@ -106,3 +106,9 @@ _operator: _font-primary
 _namespace: _font-primary
 
 _comment: _light-midnight
+
+# Styles
+
+_style-none: ""
+_style-mutable: "underline"
+_style-global: "bold"

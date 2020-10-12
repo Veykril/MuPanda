@@ -18,14 +18,14 @@ tokenColors:
 semanticTokenColors:
   variable:
     foreground: _font-primary
-    fontStyle: bold underline
+    fontStyle: _style-global _style-mutable
   variable.readonly:
     foreground: _font-primary
-    fontStyle: bold
+    fontStyle: _style-global
   variable.local:
     foreground: _font-primary
-    fontStyle: underline
+    fontStyle: _style-mutable
   variable.local.readonly:
     foreground: _font-primary
-    fontStyle: ""
+    fontStyle: _style-none
   namespace: _namespace
