@@ -12,6 +12,9 @@ tokenColors:
       keyword.operator.expression.of, keyword.operator.expression.is
     settings:
       foreground: _keyword
+  - scope: constant.language.import-export-all.ts
+    settings:
+      foreground: _font-primary
 semanticTokenColors:
   variable:
     foreground: _font-primary
@@ -24,6 +27,5 @@ semanticTokenColors:
     fontStyle: underline
   variable.local.readonly:
     foreground: _font-primary
-    fontStyle: none
+    fontStyle: ""
   namespace: _namespace
-  '*.defaultLibrary': _namespace
