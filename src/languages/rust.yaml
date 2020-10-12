@@ -31,6 +31,10 @@ tokenColors:
   - scope: support.type.primitive
     settings:
       foreground: _type-special
+  # char literals
+  - scope: string.quoted.single
+    settings:
+      foreground: _string-special
   # also colors the angle brackets, so just rely on semantic highlighting instead for this
   #- scope: meta.type_params
   #  settings:

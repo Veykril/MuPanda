@@ -67,7 +67,7 @@ tokenColors:
 # Regex, string escape `\`
 - scope: constant.character.escape
   settings:
-    foreground: _string-special
+    foreground: _interpolation
 
 # -----------------------------------------------------------------------------
 # Variables && Parameters
@@ -108,6 +108,8 @@ tokenColors:
 semanticTokenColors:
   formatSpecifier: _interpolation
   string: _string
+  # charLiteral: _string-special, isn't a thing yet
+  escapeSequence: _interpolation 
   boolean: _keyword-special
   number: _literal
 
