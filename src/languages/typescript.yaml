@@ -3,11 +3,26 @@ tokenColors:
   - scope: support.type.primitive, support.type.builtin
     settings:
       foreground: _type-special
-
   - scope: meta.template.expression
     settings:
       foreground: _interpolation
-  - scope: keyword.operator.expression.typeof, keyword.operator.expression.in, keyword.operator.expression.of
+  - scope: >-
+      keyword.operator.expression.typeof, keyword.operator.expression.in,
+      keyword.operator.expression.of, keyword.operator.expression.is
     settings:
       foreground: _keyword
-
+semanticTokenColors:
+  variable:
+    foreground: _font-primary
+    fontStyle: bold underline
+  variable.readonly:
+    foreground: _font-primary
+    fontStyle: bold
+  variable.local:
+    foreground: _font-primary
+    fontStyle: underline
+  variable.local.readonly:
+    foreground: _font-primary
+    fontStyle: none
+  namespace: _namespace
+  '*.defaultLibrary': _namespace
