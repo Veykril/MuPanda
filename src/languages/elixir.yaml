@@ -1,0 +1,8 @@
+langKey: elixir
+tokenColors:
+  - scope: comment.documentation.heredoc
+    settings:
+      foreground: _comment-doc
+  - scope: entity.name.function-call
+    settings:
+      foreground: _function
