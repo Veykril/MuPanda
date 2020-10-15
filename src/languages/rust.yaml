@@ -63,3 +63,7 @@ semanticTokenColors:
   variable.static.mutable.unsafe:
     foreground: _red
     fontStyle: _style-mutable _style-global
+  generic.injected:
+    foreground: _font-primary
+  punctuation.injected:
+    foreground: _font-primary
