@@ -104,7 +104,10 @@ tokenColors:
 - scope: entity.name.type
   settings:
     foreground: _type
-
+# preprocessor macros
+- scope: keyword.control.directive
+  settings:
+    foreground: _macro-directive
 semanticTokenColors:
   formatSpecifier: _interpolation
   string: _string
@@ -133,7 +136,7 @@ semanticTokenColors:
     fontStyle: bold
 
   function: _function
-  macro: _function-special
+  macro: _macro
   attribute: _font-primary
 
   property: _font-primary

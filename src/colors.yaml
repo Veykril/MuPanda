@@ -27,6 +27,7 @@ _blue:             '#45A9F9'
 _blue-fade:        '#45A9F990'
 _blue-fade-weak:   '#45A9F940'
 _light-blue:       '#6FC1FF'
+_light-blue-fade:  '#6FC1FF90'
 _purple:           '#B084EB'
 _purple-fade:      '#B084EB60'
 _purple-fade-weak: '#B084EB40'
@@ -106,6 +107,9 @@ _operator: _font-primary
 _namespace: _font-primary
 
 _comment: _light-midnight
+
+_macro: _light-blue
+_macro-directive: _light-blue-fade
 
 # Styles
 

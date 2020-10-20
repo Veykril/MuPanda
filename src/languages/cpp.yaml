@@ -1,4 +1,4 @@
-langKey: c
+langKey: cpp
 tokenColors:
   - scope: storage.type.built-in.primitive
     settings:
