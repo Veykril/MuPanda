@@ -54,7 +54,7 @@ semanticTokenColors:
     foreground: _red
     fontStyle: bold
   '*.mutable':
-    fontStyle: underline
+    fontStyle: _style-mutable
   function.attribute: _function-special
   # needs to be specified seperately due to the use of variable.static
   variable.static.mutable:

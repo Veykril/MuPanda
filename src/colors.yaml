@@ -113,6 +113,11 @@ _macro-directive: _light-blue-fade
 
 # Styles
 
+italic: "italic"
+bold: "bold"
+underline: "underline"
+
 _style-none: ""
-_style-mutable: "underline"
-_style-global: "bold"
+_style-mutable: underline
+_style-global: bold
+_style-comment: italic

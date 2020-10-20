@@ -59,7 +59,7 @@ tokenColors:
 - scope: string.other.link
   settings:
     foreground: _contrast-gray
-    fontStyle: normal
+    fontStyle: _style-none
 - scope: meta.link.inline.markdown
   settings:
     foreground: _blue

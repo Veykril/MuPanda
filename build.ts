@@ -3,6 +3,7 @@ import * as yaml from "https://deno.land/std/encoding/yaml.ts";
 type MappedObject = { [key: string]: string };
 
 const BLACK = "#000000";
+const STYLE_NONE = "";
 
 interface Base {
   tokenColors: TokenColor[];
@@ -60,6 +61,10 @@ function verifyLang(lang: LangExt | null): lang is LangExt {
 
 function warn_color(color_key: string) {
   console.warn(`Unknown color key ${color_key}, placing black(${BLACK})`);
+}
+
+function warn_style(style_key: string) {
+  console.warn(`Unknown style key ${style_key}, placing none(${STYLE_NONE})`);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -163,10 +168,12 @@ for (const property in res.colors) {
     res.colors[property] = BLACK;
   }
 }
+
 /// resolve tokencolors
 for (const token_color of res.tokenColors) {
   const settings = token_color.settings;
   const color_key = settings.foreground;
+  const style_key = settings.fontStyle;
 
   if (color_key) {
     const color = theme_colors[color_key];
@@ -177,27 +184,56 @@ for (const token_color of res.tokenColors) {
       settings.foreground = BLACK;
     }
   }
+  if (style_key) {
+    const style = style_key.split(" ").map((style_key) =>
+      theme_colors[style_key]
+    );
+    if (style.every((style) => style != null)) {
+      settings.fontStyle = style.join(" ");
+    } else {
+      warn_style(style_key);
+      settings.fontStyle = STYLE_NONE;
+    }
+  }
 }
+
 /// resolve semantic tokencolors
 for (const property in res.semanticTokenColors) {
-  const color_key = res.semanticTokenColors[property];
-  if (typeof (color_key) === "string") {
+  const settings = res.semanticTokenColors[property];
+  if (typeof (settings) === "string") {
     // Color is just a foreground color
-    const color = theme_colors[color_key];
+    const color = theme_colors[settings];
     if (color) {
       res.semanticTokenColors[property] = color;
     } else {
-      warn_color(color_key);
+      warn_color(settings);
       res.semanticTokenColors[property] = BLACK;
     }
-  } else if (color_key.foreground) {
-    // Color is specified as an object
-    const color = theme_colors[color_key.foreground];
-    if (color) {
-      color_key.foreground = color;
-    } else {
-      warn_color(color_key.foreground);
-      color_key.foreground = BLACK;
+  } else {
+    const color_key = settings.foreground;
+    if (color_key) {
+      const color = theme_colors[color_key];
+      if (color) {
+        settings.foreground = color;
+      } else {
+        warn_color(color_key);
+        settings.foreground = BLACK;
+      }
+    }
+    const style_key = settings.fontStyle;
+    if (style_key) {
+      console.log(style_key);
+      const style = style_key.split(" ").map((style_key) =>
+        theme_colors[style_key]
+      );
+      console.log(style);
+      if (style.every((style) => style != null)) {
+        settings.fontStyle = style.join(" ");
+        console.log(settings.fontStyle);
+      } else {
+        warn_style(style_key);
+        settings.fontStyle = STYLE_NONE;
+      }
     }
   }
 }
