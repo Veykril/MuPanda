@@ -222,14 +222,11 @@ for (const property in res.semanticTokenColors) {
     }
     const style_key = settings.fontStyle;
     if (style_key) {
-      console.log(style_key);
       const style = style_key.split(" ").map((style_key) =>
         theme_colors[style_key]
       );
-      console.log(style);
       if (style.every((style) => style != null)) {
         settings.fontStyle = style.join(" ");
-        console.log(settings.fontStyle);
       } else {
         warn_style(style_key);
         settings.fontStyle = STYLE_NONE;

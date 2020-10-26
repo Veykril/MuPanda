@@ -1,0 +1,17 @@
+langKey: java
+tokenColors:
+  - scope: storage.modifier.package, storage.modifier.import
+    settings:
+      foreground: _namespace
+  - scope: entity.other.inherited-class, storage.type, storage.type.generic
+    settings:
+      foreground: _type
+  - scope: storage.type.generic.wildcard, storage.type.primitive
+    settings:
+      foreground: _type-special
+  - scope: storage.type.annotation, punctuation.definition.annotation
+    settings:
+      foreground: _macro
+semanticTokenColors:
+  annotation: _macro
+  annotationMember: _macro

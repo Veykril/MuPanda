@@ -127,6 +127,7 @@ semanticTokenColors:
   keyword: _keyword
   operator: _operator
   
+  class: _type
   struct: _type
   enum: _type
   union: _type
@@ -139,8 +140,11 @@ semanticTokenColors:
   macro: _macro
   attribute: _font-primary
 
-  property: _font-primary
   parameter: _font-primary
+  property: _font-primary
+  property.static:
+    foreground: _font-primary
+    fontStyle: bold
   variable: _font-primary
   variable.const:
     foreground: _font-primary
