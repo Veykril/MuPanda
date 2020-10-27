@@ -56,6 +56,10 @@ semanticTokenColors:
   '*.mutable':
     fontStyle: _style-mutable
   function.attribute: _function-special
+  variable.callable: _function
+  variable.callable.mutable:
+    foreground: _function
+    fontStyle: _style-mutable
   # needs to be specified seperately due to the use of variable.static
   variable.static.mutable:
     fontStyle: _style-mutable _style-global
