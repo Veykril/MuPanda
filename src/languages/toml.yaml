@@ -1,17 +1,11 @@
 tokenColors:
-- scope: entity.other.attribute-name.table.toml
+- scope: variable.key.table.toml
   settings:
-    foreground: _purple
-- scope: entity.other.attribute-name.table.array.toml
+    foreground: _type
+- scope: variable.key.array.table.toml
   settings:
-    foreground: _purple
+    foreground: _type
     fontStyle: italic
-- scope: keyword.key.toml
+- scope: variable.key.toml
   settings:
     foreground: _font-primary
-- scope: invalid.deprecated.noValueGiven.toml
-  settings:
-    foreground: _error
-- scope: constant.other.boolean.toml
-  settings:
-    foreground: _keyword-special
