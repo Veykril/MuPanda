@@ -137,6 +137,7 @@ semanticTokenColors:
     fontStyle: bold
 
   function: _function
+  method: _function
   macro: _macro
   attribute: _font-primary
 
