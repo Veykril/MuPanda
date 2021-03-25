@@ -3,10 +3,11 @@ colors:
   # Base Colors
   # -----------------------------------------------------------------------------
   # Defaults for editor elements, will be used if not set by a specific component.
-  # TODO: widget.shadow, selection.background
-  foreground:      _foreground
-  errorForeground: _light-red
-  focusBorder:     _green-fade
+  # TODO: widget.shadow,
+  foreground:           _foreground
+  errorForeground:      _light-red
+  focusBorder:          _green-fade
+  selection.background: _orange-fade-weak
 
   # -----------------------------------------------------------------------------
   # Activity Bar
@@ -15,9 +16,10 @@ colors:
   activityBar.background:      _border
   activityBar.foreground:      _foreground
   activityBar.border:          _border
+  activityBar.dropBorder:      _green
+  activityBar.activeBorder:    _green
   activityBarBadge.background: _green
   activityBarBadge.foreground: _background-dark
-
   # -----------------------------------------------------------------------------
   # Badges
   # -----------------------------------------------------------------------------
@@ -86,11 +88,11 @@ colors:
   # -----------------------------------------------------------------------------
   # Widgets are feautures inside the main editor like snippets, autocomplete, in
   # file find.
-  editorWidget.background: _seal
+  editorWidget.background: _background-light
   editorWidget.border:     _gray
   # This sets the background for suggestions complete currently selected element
   editorSuggestWidget.selectedBackground: _green-fade
-  editorHoverWidget.background: _seal
+  editorHoverWidget.background: _background-light
   # -----------------------------------------------------------------------------
   # Overview Ruler
   # -----------------------------------------------------------------------------
@@ -226,6 +228,8 @@ colors:
   # -----------------------------------------------------------------------------
   # Peek View
   # -----------------------------------------------------------------------------
-  peekViewEditor.background: _gray
   peekView.border: _green
+  peekViewEditor.background: _background-light
+  peekViewEditor.matchHighlightBackground: _orange-fade
   peekViewResult.selectionBackground: _green-fade-weak
+  peekViewResult.matchHighlightBackground: _orange-fade-weak
