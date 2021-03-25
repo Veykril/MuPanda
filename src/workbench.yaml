@@ -223,3 +223,9 @@ colors:
   terminal.ansiRed:           _red
   terminal.ansiWhite:         _lighter-gray
   terminal.ansiYellow:        _orange
+  # -----------------------------------------------------------------------------
+  # Peek View
+  # -----------------------------------------------------------------------------
+  peekViewEditor.background: _gray
+  peekView.border: _green
+  peekViewResult.selectionBackground: _green-fade-weak
