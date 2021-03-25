@@ -71,3 +71,22 @@ semanticTokenColors:
     foreground: _font-primary
   punctuation.injected:
     foreground: _font-primary
+  # punctuation
+  bracket:
+    foreground: _font-primary
+  brace:
+    foreground: _font-primary
+  parenthesis:
+    foreground: _font-primary
+  angle:
+    foreground: _font-primary
+  comma:
+    foreground: _font-primary
+  dot:
+    foreground: _font-primary
+  colon:
+    foreground: _font-primary
+  semicolon:
+    foreground: _font-primary
+  punctuation:
+    foreground: _font-primary
