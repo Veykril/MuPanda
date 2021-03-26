@@ -45,10 +45,16 @@ semanticTokenColors:
   selfKeyword: _keyword-special
   typeAlias: _type
   builtinType: _type-special
-  enumMember: _function
+  enumMember: _type
   lifetime:
     foreground: _string
     fontStyle: italic
+  label:
+    foreground: _string
+    fontStyle: italic
+  constParameter:
+    foreground: _font-primary
+    fontStyle: bold
   # modifiers
   '*.unsafe': 
     foreground: _red
