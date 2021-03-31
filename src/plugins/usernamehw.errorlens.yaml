@@ -1,0 +1,9 @@
+colors:
+  'errorLens.errorBackground': _error-bg
+  'errorLens.errorForeground': _error
+  'errorLens.warningBackground': _warning-bg
+  'errorLens.warningForeground': _warning
+  'errorLens.infoBackground': _info-bg
+  'errorLens.infoForeground': _info
+  'errorLens.hintBackground': _hint-bg
+  'errorLens.hintForeground': _hint

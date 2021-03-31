@@ -78,10 +78,14 @@ _git-ignored:   _light-gray
 _git-untracked: _light-purple
 
 # Linter Colors
-_error:   _light-red
-_warning: _light-orange
-_info:    _light-blue
-_hint:    _light-orange
+_error:      _light-red
+_error-bg:   _light-red-fade
+_warning:    _light-orange
+_warning-bg: _light-orange-fade
+_info:       _light-blue
+_info-bg:    _light-blue-fade
+_hint:       _light-orange
+_hint-bg:    _light-orange-fade
 
 # Generic Language Element Colors
 
