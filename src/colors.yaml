@@ -23,35 +23,39 @@ _white:             '#FFFFFF'
 # -----------------------------------------------------------------------------
 # Blue+Purple+Green
 # -----------------------------------------------------------------------------
-_blue:             '#45A9F9'
-_blue-fade:        '#45A9F990'
-_blue-fade-weak:   '#45A9F940'
-_light-blue:       '#6FC1FF'
-_light-blue-fade:  '#6FC1FF90'
-_purple:           '#B084EB'
-_purple-fade:      '#B084EB60'
-_purple-fade-weak: '#B084EB40'
-_light-purple:     '#BCAAFE'
-_green:            '#19f9d8'
-_green-fade:       '#19f9d899'
-_green-fade-weak:  '#19f9d840'
-_light-green:      '#6FE7D2'
+_blue:                  '#45A9F9'
+_blue-fade:             '#45A9F990'
+_blue-fade-weak:        '#45A9F940'
+_light-blue:            '#6FC1FF'
+_light-blue-fade:       '#6FC1FF90'
+_light-blue-fade-weak:  '#6FC1FF40'
+_purple:                '#B084EB'
+_purple-fade:           '#B084EB60'
+_purple-fade-weak:      '#B084EB40'
+_light-purple:          '#BCAAFE'
+_green:                 '#19f9d8'
+_green-fade:            '#19f9d899'
+_green-fade-weak:       '#19f9d840'
+_light-green:           '#6FE7D2'
+_light-green-fade-weak: '#6FE7D240'
 
 # -----------------------------------------------------------------------------
 # Pink+Red+Orange
 # -----------------------------------------------------------------------------
-_red:               '#FF2C6D'
-_red-fade:          '#FF2C6D66'
-_light-red:         '#FF4B82'
-_light-red-fade:    '#FF4B8266'
-_orange:            '#FFB86C'
-_orange-fade:       '#FFB86C60'
-_orange-fade-weak:  '#FFB86C40'
-_light-orange:      '#FFCC95'
-_light-orange-fade: '#FFCC9560'
-_pink:              '#FF75B5'
-_light-pink:        '#FF9AC1'
-_light-pink-fade:   '#FF9AC170'
+_red:                    '#FF2C6D'
+_red-fade:               '#FF2C6D66'
+_light-red:              '#FF4B82'
+_light-red-fade:         '#FF4B8266'
+_light-red-fade-weak:    '#FF4B8240'
+_orange:                 '#FFB86C'
+_orange-fade:            '#FFB86C60'
+_orange-fade-weak:       '#FFB86C40'
+_light-orange:           '#FFCC95'
+_light-orange-fade:      '#FFCC9560'
+_light-orange-fade-weak: '#FFCC9540'
+_pink:                   '#FF75B5'
+_light-pink:             '#FF9AC1'
+_light-pink-fade:        '#FF9AC170'
 
 # -----------------------------------------------------------------------------
 # Element Colors
@@ -79,13 +83,13 @@ _git-untracked: _light-purple
 
 # Linter Colors
 _error:      _light-red
-_error-bg:   _light-red-fade
+_error-bg:   _light-red-fade-weak
 _warning:    _light-orange
-_warning-bg: _light-orange-fade
+_warning-bg: _light-orange-fade-weak
 _info:       _light-blue
-_info-bg:    _light-blue-fade
-_hint:       _light-orange
-_hint-bg:    _light-orange-fade
+_info-bg:    _light-blue-fade-weak
+_hint:       _light-green
+_hint-bg:    _light-green-fade-weak
 
 # Generic Language Element Colors
 
