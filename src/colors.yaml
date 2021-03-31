@@ -23,39 +23,43 @@ _white:             '#FFFFFF'
 # -----------------------------------------------------------------------------
 # Blue+Purple+Green
 # -----------------------------------------------------------------------------
-_blue:                  '#45A9F9'
-_blue-fade:             '#45A9F990'
-_blue-fade-weak:        '#45A9F940'
-_light-blue:            '#6FC1FF'
-_light-blue-fade:       '#6FC1FF90'
-_light-blue-fade-weak:  '#6FC1FF40'
-_purple:                '#B084EB'
-_purple-fade:           '#B084EB60'
-_purple-fade-weak:      '#B084EB40'
-_light-purple:          '#BCAAFE'
-_green:                 '#19f9d8'
-_green-fade:            '#19f9d899'
-_green-fade-weak:       '#19f9d840'
-_light-green:           '#6FE7D2'
-_light-green-fade-weak: '#6FE7D240'
+_blue:              '#45A9F9'
+_blue-fade:         '#45A9F990'
+_blue-fade2:        '#45A9F940'
+_light-blue:        '#6FC1FF'
+_light-blue-fade:   '#6FC1FF90'
+_light-blue-fade2:  '#6FC1FF40'
+_light-blue-fade3:  '#6FC1FF20'
+_purple:            '#B084EB'
+_purple-fade:       '#B084EB60'
+_purple-fade2:      '#B084EB40'
+_light-purple:      '#BCAAFE'
+_green:             '#19f9d8'
+_green-fade:        '#19f9d899'
+_green-fade2:       '#19f9d840'
+_light-green:       '#6FE7D2'
+_light-green-fade2: '#6FE7D240'
+_light-green-fade3: '#6FE7D220'
 
 # -----------------------------------------------------------------------------
 # Pink+Red+Orange
 # -----------------------------------------------------------------------------
-_red:                    '#FF2C6D'
-_red-fade:               '#FF2C6D66'
-_light-red:              '#FF4B82'
-_light-red-fade:         '#FF4B8266'
-_light-red-fade-weak:    '#FF4B8240'
-_orange:                 '#FFB86C'
-_orange-fade:            '#FFB86C60'
-_orange-fade-weak:       '#FFB86C40'
-_light-orange:           '#FFCC95'
-_light-orange-fade:      '#FFCC9560'
-_light-orange-fade-weak: '#FFCC9540'
-_pink:                   '#FF75B5'
-_light-pink:             '#FF9AC1'
-_light-pink-fade:        '#FF9AC170'
+_red:                '#FF2C6D'
+_red-fade:           '#FF2C6D66'
+_light-red:          '#FF4B82'
+_light-red-fade:     '#FF4B8266'
+_light-red-fade2:    '#FF4B8240'
+_light-red-fade3:    '#FF4B8220'
+_orange:             '#FFB86C'
+_orange-fade:        '#FFB86C60'
+_orange-fade2:       '#FFB86C40'
+_light-orange:       '#FFCC95'
+_light-orange-fade:  '#FFCC9560'
+_light-orange-fade2: '#FFCC9540'
+_light-orange-fade3: '#FFCC9520'
+_pink:               '#FF75B5'
+_light-pink:         '#FF9AC1'
+_light-pink-fade:    '#FF9AC170'
 
 # -----------------------------------------------------------------------------
 # Element Colors
@@ -65,12 +69,12 @@ _light-pink-fade:        '#FF9AC170'
 _background-dark:        _very-dark-gray
 _background-light:       _seal
 _foreground:             _very-light-gray
-_diff-green:             _green-fade-weak
+_diff-green:             _green-fade2
 _diff-red:               _light-red-fade
 _merge-current-header:   _purple-fade
-_merge-current-content:  _purple-fade-weak
+_merge-current-content:  _purple-fade2
 _merge-incoming-header:  _orange-fade
-_merge-incoming-content: _orange-fade-weak
+_merge-incoming-content: _orange-fade2
 _font-primary:           _very-light-gray
 _border:                 _charcoal
 
@@ -83,13 +87,13 @@ _git-untracked: _light-purple
 
 # Linter Colors
 _error:      _light-red
-_error-bg:   _light-red-fade-weak
+_error-bg:   _light-red-fade3
 _warning:    _light-orange
-_warning-bg: _light-orange-fade-weak
+_warning-bg: _light-orange-fade3
 _info:       _light-blue
-_info-bg:    _light-blue-fade-weak
+_info-bg:    _light-blue-fade3
 _hint:       _light-green
-_hint-bg:    _light-green-fade-weak
+_hint-bg:    _light-green-fade3
 
 # Generic Language Element Colors
 

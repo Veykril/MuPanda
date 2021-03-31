@@ -7,7 +7,7 @@ colors:
   foreground:           _foreground
   errorForeground:      _light-red
   focusBorder:          _green-fade
-  selection.background: _orange-fade-weak
+  selection.background: _orange-fade2
 
   # -----------------------------------------------------------------------------
   # Activity Bar
@@ -39,8 +39,14 @@ colors:
   # -----------------------------------------------------------------------------
   # Input
   # -----------------------------------------------------------------------------
-  inputValidation.errorBackground: _red-fade
-  inputValidation.errorBorder: _error
+  inputValidation.errorBackground:   _error-bg
+  inputValidation.errorBorder:       _error
+  inputValidation.warningBackground: _warning-bg
+  inputValidation.warningBorder:     _warning
+  inputValidation.infoBackground:    _info-bg
+  inputValidation.infoBorder:        _info
+  inputValidation.hintBackground:    _hint-bg
+  inputValidation.hintBorder:        _hint
   # -----------------------------------------------------------------------------
   # Diff View
   # -----------------------------------------------------------------------------
@@ -62,14 +68,14 @@ colors:
   editorCursor.foreground:       _light-red
   editorRuler.foreground:        _purple-fade
   editorBracketMatch.border:     _green
-  editorBracketMatch.background: _green-fade-weak
-  editorCodeLens.foreground:     _orange-fade-weak
+  editorBracketMatch.background: _green-fade2
+  editorCodeLens.foreground:     _orange-fade2
   editorWhitespace.foreground:   _steel-gray
   # Selection highlight settings are applied when text is selected, the highlight
   # background will automatically highlight all other matches of the selected text
-  editor.selectionBackground:          _orange-fade-weak
-  editor.inactiveSelectionBackground:  _orange-fade-weak
-  editor.selectionHighlightBackground: _orange-fade-weak
+  editor.selectionBackground:          _orange-fade2
+  editor.inactiveSelectionBackground:  _orange-fade2
+  editor.selectionHighlightBackground: _orange-fade2
   # Word highlight settings are used when the cursor is inside of a symbol and will
   # automatically highlight all other occurences of that symbol (with the option for
   # different colors for read vs write access of symbol). Note that this overrides
@@ -79,10 +85,10 @@ colors:
   editor.wordHighlightStrongBackground: _light-pink-fade # During write access
   # Find match settings are triggered by current find/replace dialong in top right
   editor.findMatchBackground:          _purple-fade
-  editor.findMatchHighlightBackground: _orange-fade-weak
+  editor.findMatchHighlightBackground: _orange-fade2
   # Currently active line background
   editor.lineHighlightBackground:  _gray
-  editor.hoverHighlightBackground: _blue-fade-weak
+  editor.hoverHighlightBackground: _blue-fade2
   # -----------------------------------------------------------------------------
   # Widgets
   # -----------------------------------------------------------------------------
@@ -99,8 +105,8 @@ colors:
   # The overview ruler is the thin bar at the far right of the editor, it has
   # decorations for git status and linter warnings
   editorOverviewRuler.border:                 _transparent
-  editorOverviewRuler.findMatchForeground:    _orange-fade-weak
-  editorOverviewRuler.bracketMatchForeground: _green-fade-weak
+  editorOverviewRuler.findMatchForeground:    _orange-fade2
+  editorOverviewRuler.bracketMatchForeground: _green-fade2
   editorOverviewRuler.modifiedForeground:     _git-modified
   editorOverviewRuler.addedForeground:        _git-added
   editorOverviewRuler.deletedForeground:      _git-deleted
@@ -190,6 +196,8 @@ colors:
   statusBar.noFolderForeground:  _foreground
   statusBar.debuggingBackground: _purple
   statusBar.debuggingForeground: _foreground
+  statusBarItem.errorBackground: _error-bg
+  statusBarItem.errorForeground: _error
   # -----------------------------------------------------------------------------
   # Title Bar
   # -----------------------------------------------------------------------------
@@ -231,5 +239,11 @@ colors:
   peekView.border: _green
   peekViewEditor.background: _background-light
   peekViewEditor.matchHighlightBackground: _orange-fade
-  peekViewResult.selectionBackground: _green-fade-weak
-  peekViewResult.matchHighlightBackground: _orange-fade-weak
+  peekViewResult.selectionBackground: _green-fade2
+  peekViewResult.matchHighlightBackground: _orange-fade2
+  # -----------------------------------------------------------------------------
+  # Notifications
+  # -----------------------------------------------------------------------------
+  notificationsErrorIcon.foreground: _error
+  notificationsWarningIcon.foreground: _warning
+  notificationsInfoIcon.foreground: _info
