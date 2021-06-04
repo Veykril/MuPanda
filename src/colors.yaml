@@ -17,7 +17,7 @@ _gray:              '#373B41'
 _gray-fade:         '#373B4199'
 _seal:              '#292A2B'
 _very-dark-gray:    '#242526'
-_charcoal:          '#222223' 
+_charcoal:          '#222223'
 _white:             '#FFFFFF'
 
 # -----------------------------------------------------------------------------
@@ -102,7 +102,7 @@ _keyword-special: _light-pink
 
 _type: _orange
 _type-special: _light-orange
-_literal: _orange
+_literal: _light-orange
 _interpolation: _light-orange
 
 _string: _green
