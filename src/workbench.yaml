@@ -39,19 +39,20 @@ colors:
   # -----------------------------------------------------------------------------
   # Input
   # -----------------------------------------------------------------------------
+  # Also colors the in-editor popups
   inputValidation.errorBackground:   _error-bg
   inputValidation.errorBorder:       _error
   inputValidation.warningBackground: _warning-bg
   inputValidation.warningBorder:     _warning
   inputValidation.infoBackground:    _info-bg
   inputValidation.infoBorder:        _info
-  inputValidation.hintBackground:    _hint-bg
-  inputValidation.hintBorder:        _hint
+  # inputValidation.hintBackground:    _hint-bg
+  # inputValidation.hintBorder:        _hint
   # -----------------------------------------------------------------------------
   # Diff View
   # -----------------------------------------------------------------------------
   diffEditor.insertedTextBackground: _diff-green
-  diffEditor.removedTextBackground: _diff-red
+  diffEditor.removedTextBackground:  _diff-red
   # -----------------------------------------------------------------------------
   # Merge Conflicts
   # -----------------------------------------------------------------------------
@@ -77,13 +78,13 @@ colors:
   editor.inactiveSelectionBackground:  _orange-fade2
   editor.selectionHighlightBackground: _orange-fade2
   # Word highlight settings are used when the cursor is inside of a symbol and will
-  # automatically highlight all other occurences of that symbol (with the option for
+  # automatically highlight all other occurrences of that symbol (with the option for
   # different colors for read vs write access of symbol). Note that this overrides
   # the selection background after double clicking a symbol to select, but not when
   # selecting with keyboard
   editor.wordHighlightBackground:       _light-orange-fade # During read access
   editor.wordHighlightStrongBackground: _light-pink-fade # During write access
-  # Find match settings are triggered by current find/replace dialong in top right
+  # Find match settings are triggered by current find/replace dialog in top right
   editor.findMatchBackground:          _purple-fade
   editor.findMatchHighlightBackground: _orange-fade2
   # Currently active line background
@@ -92,7 +93,7 @@ colors:
   # -----------------------------------------------------------------------------
   # Widgets
   # -----------------------------------------------------------------------------
-  # Widgets are feautures inside the main editor like snippets, autocomplete, in
+  # Widgets are features inside the main editor like snippets, autocomplete, in
   # file find.
   editorWidget.background: _background-light
   editorWidget.border:     _gray

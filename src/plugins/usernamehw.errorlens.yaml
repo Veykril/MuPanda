@@ -1,9 +1,9 @@
 colors:
-  'errorLens.errorBackground': _error-bg
+  'errorLens.errorBackground': _error-bg-weak
   'errorLens.errorForeground': _error
-  'errorLens.warningBackground': _warning-bg
+  'errorLens.warningBackground': _warning-bg-weak
   'errorLens.warningForeground': _warning
-  'errorLens.infoBackground': _info-bg
+  'errorLens.infoBackground': _info-bg-weak
   'errorLens.infoForeground': _info
-  'errorLens.hintBackground': _hint-bg
+  'errorLens.hintBackground': _hint-bg-weak
   'errorLens.hintForeground': _hint

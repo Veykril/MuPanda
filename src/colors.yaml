@@ -38,6 +38,7 @@ _green:             '#19f9d8'
 _green-fade:        '#19f9d899'
 _green-fade2:       '#19f9d840'
 _light-green:       '#6FE7D2'
+_light-green-fade: '#6FE7D240'
 _light-green-fade2: '#6FE7D240'
 _light-green-fade3: '#6FE7D220'
 
@@ -86,14 +87,18 @@ _git-ignored:   _light-gray
 _git-untracked: _light-purple
 
 # Linter Colors
-_error:      _light-red
-_error-bg:   _light-red-fade3
-_warning:    _light-orange
-_warning-bg: _light-orange-fade3
-_info:       _light-blue
-_info-bg:    _light-blue-fade3
-_hint:       _light-green
-_hint-bg:    _light-green-fade3
+_error:           _light-red
+_error-bg:        _light-red-fade
+_error-bg-weak:   _light-red-fade3
+_warning:         _light-orange
+_warning-bg:      _light-orange-fade
+_warning-bg-weak: _light-orange-fade3
+_info:            _light-blue
+_info-bg:         _light-blue-fade
+_info-bg-weak:    _light-blue-fade3
+_hint:            _light-green
+_hint-bg:         _light-green-fade
+_hint-bg-weak:    _light-green-fade3
 
 # Generic Language Element Colors
 
