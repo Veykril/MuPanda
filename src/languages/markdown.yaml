@@ -3,11 +3,11 @@ tokenColors:
 - scope: markup.bold
   settings:
     foreground: _orange
-    font-weight: bold
+    fontStyle: bold
 - scope: punctuation.definition.bold.markdown
   settings:
     foreground: _light-orange
-    font-weight: bold
+    fontStyle: bold
 - scope: markup.changed
   settings:
     foreground: _pink
