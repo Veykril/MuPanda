@@ -1,5 +1,5 @@
 name: vsce
-on: 
+on:
   push:
     branches:
     - master
@@ -13,11 +13,11 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14'
     - name: Cache vsce module
       uses: actions/cache@v2
       with:
-        path: ~/.npm 
+        path: ~/.npm
         key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.OS }}-node-

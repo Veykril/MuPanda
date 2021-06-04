@@ -1,4 +1,4 @@
-import * as yaml from "https://deno.land/std/encoding/yaml.ts";
+import * as yaml from "https://deno.land/std@0.97.0/encoding/yaml.ts";
 
 type MappedObject = { [key: string]: string };
 
