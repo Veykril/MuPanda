@@ -1,7 +1,7 @@
 # Color name structure is as follows:
 #   _((very-)?(light|dark)-)?[a-zA-Z_]+(-fade(-weak?))?
 
-_transparent:            '#00000000'
+_transparent:        '#00000000'
 
 # -----------------------------------------------------------------------------
 # Gray Scale
@@ -38,7 +38,7 @@ _green:             '#19f9d8'
 _green-fade:        '#19f9d899'
 _green-fade2:       '#19f9d840'
 _light-green:       '#6FE7D2'
-_light-green-fade: '#6FE7D240'
+_light-green-fade:  '#6FE7D290'
 _light-green-fade2: '#6FE7D240'
 _light-green-fade3: '#6FE7D220'
 

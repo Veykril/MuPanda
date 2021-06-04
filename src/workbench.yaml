@@ -5,7 +5,7 @@ colors:
   # Defaults for editor elements, will be used if not set by a specific component.
   # TODO: widget.shadow,
   foreground:           _foreground
-  errorForeground:      _light-red
+  errorForeground:      _error
   focusBorder:          _green-fade
   selection.background: _orange-fade2
 
@@ -34,8 +34,8 @@ colors:
   # -----------------------------------------------------------------------------
   button.background:      _blue
   button.foreground:      _white
-  button.hoverBackground: _light-midnight
-  checkbox.border:        _blue
+  button.hoverBackground: _purple
+  checkbox.border:        _purple
   # -----------------------------------------------------------------------------
   # Input
   # -----------------------------------------------------------------------------
@@ -95,11 +95,12 @@ colors:
   # -----------------------------------------------------------------------------
   # Widgets are features inside the main editor like snippets, autocomplete, in
   # file find.
-  editorWidget.background: _background-light
-  editorWidget.border:     _gray
-  # This sets the background for suggestions complete currently selected element
-  editorSuggestWidget.selectedBackground: _green-fade
+  editorWidget.background:      _background-light
+  editorWidget.border:          _gray
   editorHoverWidget.background: _background-light
+  editorHoverWidget.border:     _gray
+  editorSuggestWidget.selectedForeground: _green
+  editorSuggestWidget.selectedBackground: _green-fade
   # -----------------------------------------------------------------------------
   # Overview Ruler
   # -----------------------------------------------------------------------------
@@ -155,7 +156,7 @@ colors:
   # List elements are inside the sidebar + command dropdown
   # Mouse hover
   list.hoverBackground: _background-light
-  list.hoverForeground: _lighter-gray
+  list.hoverForeground: _green
 
   # Keyboard focus
   list.focusBackground: _background-light
@@ -168,7 +169,9 @@ colors:
   list.inactiveSelectionBackground: _background-light
   list.inactiveSelectionForeground: _green
   # The text that matches a search term inside of lists
-  list.highlightForeground: _light-blue
+  list.highlightForeground:   _light-blue
+  list.errorForeground:   _error
+  list.warningForeground: _warning
   # -----------------------------------------------------------------------------
   # Sidebar
   # -----------------------------------------------------------------------------
@@ -248,3 +251,5 @@ colors:
   notificationsErrorIcon.foreground: _error
   notificationsWarningIcon.foreground: _warning
   notificationsInfoIcon.foreground: _info
+
+  breadcrumb.focusForeground: _green
