@@ -1,6 +1,10 @@
 # Mupanda
 
-Personal Syntax Theme based on [Panda-Syntax](https://www.github.com/tinkertrain/panda-syntax-vscode) for Visual Studio Code.
+Personal Syntax Theme based on [Panda-Syntax](https://www.github.com/tinkertrain/panda-syntax-vscode) for Visual Studio Code. The extension isn't on the marketplace, instead build it yourself or fetch a build artifact from [the actions tab](https://github.com/Veykril/MuPanda/actions).
+
+## How to build
+
+Install [Deno](https://deno.land/) and checkout the repo. Then run `deno run --allow-read --allow-write build.ts` followed by `vsce package`.
 
 ## General Color Info
 
