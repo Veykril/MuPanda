@@ -18,7 +18,7 @@ colors:
   activityBar.border:          _border
   activityBar.dropBorder:      _green
   activityBar.activeBorder:    _green
-  activityBarBadge.background: _green
+  activityBarBadge.background: _blue
   activityBarBadge.foreground: _background-dark
   # -----------------------------------------------------------------------------
   # Badges
@@ -100,7 +100,7 @@ colors:
   editorHoverWidget.background: _background-light
   editorHoverWidget.border:     _gray
   editorSuggestWidget.selectedForeground: _green
-  editorSuggestWidget.selectedBackground: _green-fade
+  editorSuggestWidget.selectedBackground: _green-fade2
   # -----------------------------------------------------------------------------
   # Overview Ruler
   # -----------------------------------------------------------------------------
