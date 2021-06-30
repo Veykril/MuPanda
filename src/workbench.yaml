@@ -8,6 +8,7 @@ colors:
   errorForeground:      _error
   focusBorder:          _green-fade
   selection.background: _orange-fade2
+  contrastBorder:       _border
 
   # -----------------------------------------------------------------------------
   # Activity Bar
