@@ -56,12 +56,12 @@ semanticTokenColors:
     foreground: _font-primary
     fontStyle: bold
   # modifiers
-  '*.unsafe': 
+  '*.unsafe':
     foreground: _red
     fontStyle: bold
   '*.mutable':
     fontStyle: _style-mutable
-  function.attribute: _function-special
+  generic.attribute: _font-primary
   variable.callable: _function
   variable.callable.mutable:
     foreground: _function
