@@ -1,0 +1,11 @@
+langKey: zig
+tokenColors:
+semanticTokenColors:
+  label:
+    foreground: _string
+    fontStyle: italic
+  builtin:
+    foreground: _macro
+    fontStyle: italic
+  type.namespace: _font-primary
+  keywordLiteral: _keyword-special

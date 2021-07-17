@@ -31,7 +31,7 @@ interface ColorSettings {
 interface LangExt {
   langKey?: string;
   semLangKey?: string;
-  tokenColors: TokenColor[];
+  tokenColors?: TokenColor[];
   semanticTokenColors?: SemanticTokenColors;
 }
 
@@ -52,11 +52,6 @@ function parse_yaml_opt<T extends object>(
 
 function parse_yaml<T extends object>(path: string): T {
   return yaml.parse(Deno.readTextFileSync(path)) as T;
-}
-
-// we need this cause there is no cast that checks properties ...
-function verifyLang(lang: LangExt | null): lang is LangExt {
-  return !!lang && !!lang.tokenColors;
 }
 
 function warn_color(color_key: string) {
@@ -100,7 +95,7 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
   const lang = parse_yaml_opt<LangExt>(
     `./src/languages/${lang_name}`,
   );
-  if (!verifyLang(lang)) {
+  if (!lang) {
     console.info(`Skipping invalid language ${lang_name}`);
     continue;
   }
@@ -108,11 +103,13 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
   if (lang.langKey) {
     // append .lang_key to all textmate scopes
     const tm_suffix = "." + lang.langKey;
-    lang.tokenColors.forEach((token_color) => {
-      token_color.scope = token_color.scope.split(",").map((scope) =>
-        scope + tm_suffix
-      ).join(",");
-    });
+    if (lang.tokenColors) {
+      lang.tokenColors.forEach((token_color) => {
+        token_color.scope = token_color.scope.split(",").map((scope) =>
+          scope + tm_suffix
+        ).join(",");
+      });
+    }
     const sem_suffix = ":" + (lang.semLangKey || lang.langKey);
     // append .lang_key to all semantic token colors if they exists
     if (lang.semanticTokenColors) {
@@ -123,7 +120,9 @@ for (const dirEntry of Deno.readDirSync("./src/languages")) {
       lang.semanticTokenColors = remapped;
     }
   }
-  res.tokenColors = res.tokenColors.concat(lang.tokenColors);
+  if (lang.tokenColors) {
+    res.tokenColors = res.tokenColors.concat(lang.tokenColors);
+  }
   if (lang.semanticTokenColors) {
     for (const prop in lang.semanticTokenColors) {
       if (prop in res.semanticTokenColors) {

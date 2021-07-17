@@ -112,7 +112,7 @@ semanticTokenColors:
   formatSpecifier: _interpolation
   string: _string
   # charLiteral: _string-special, isn't a thing yet
-  escapeSequence: _interpolation 
+  escapeSequence: _interpolation
   boolean: _keyword-special
   number: _literal
 
@@ -126,7 +126,7 @@ semanticTokenColors:
 
   keyword: _keyword
   operator: _operator
-  
+
   class: _type
   struct: _type
   enum: _type
@@ -156,3 +156,4 @@ semanticTokenColors:
   variable.global:
     foreground: _font-primary
     fontStyle: bold
+  enumMember: _font-primary
