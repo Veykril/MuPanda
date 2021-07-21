@@ -74,13 +74,13 @@ _diff-green:             _green-fade2
 _diff-red:               _light-red-fade
 _merge-current-header:   _purple-fade
 _merge-current-content:  _purple-fade2
-_merge-incoming-header:  _orange-fade
-_merge-incoming-content: _orange-fade2
+_merge-incoming-header:  _blue-fade
+_merge-incoming-content: _blue-fade2
 _font-primary:           _very-light-gray
 _border:                 _charcoal
 
 # Git Colors
-_git-modified:  _light-orange
+_git-modified:  _light-pink
 _git-added:     _light-green
 _git-deleted:   _light-red
 _git-ignored:   _light-gray
