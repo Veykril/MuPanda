@@ -72,6 +72,7 @@ colors:
   editorBracketMatch.border:     _green
   editorBracketMatch.background: _green-fade2
   editorCodeLens.foreground:     _orange-fade2
+  editorGroup.border:            _border
   editorWhitespace.foreground:   _steel-gray
   # Selection highlight settings are applied when text is selected, the highlight
   # background will automatically highlight all other matches of the selected text
@@ -254,3 +255,14 @@ colors:
   notificationsInfoIcon.foreground: _info
 
   breadcrumb.focusForeground: _green
+
+  # -----------------------------------------------------------------------------
+  # Panel
+  # -----------------------------------------------------------------------------
+  panel.border: _border
+  panel.background: _background-dark
+  panelSectionHeader.border: _border
+  panelSection.border: _border
+  panelTitle.activeBorder: _green
+  panelTitle.activeForeground: _green
+  panelTitle.inactiveForeground: _foreground
