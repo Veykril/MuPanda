@@ -1,8 +1,11 @@
 # Mupanda
 
-Personal Syntax Theme based on [Panda-Syntax](https://www.github.com/tinkertrain/panda-syntax-vscode) for Visual Studio Code. The extension isn't on the marketplace, instead build it yourself or fetch a build artifact from [the actions tab](https://github.com/Veykril/MuPanda/actions).
+Personal Syntax Theme based on [Panda-Syntax](https://www.github.com/tinkertrain/panda-syntax-vscode) for Visual Studio Code.
+The extension isn't on the marketplace, instead build it yourself or fetch a build artifact from [the actions tab](https://github.com/Veykril/MuPanda/actions).
 
 This extension mainly makes use of semantic highlighting, so if used without it the theme will look broken for most things.
+
+It also is mainly used with Rust in mind only so other languages might look odd in some regards if supported at all, happy to accept contributions.
 
 <img alt="" src="https://user-images.githubusercontent.com/3757771/126920084-f5e9ff22-1148-4c66-a718-8b83c54cf1d1.png" width="60%">
 
