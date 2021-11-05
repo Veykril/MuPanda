@@ -69,8 +69,6 @@ colors:
   editor.foreground:             _foreground
   editorCursor.foreground:       _light-red
   editorRuler.foreground:        _purple-fade
-  editorBracketMatch.border:     _green
-  editorBracketMatch.background: _green-fade2
   editorCodeLens.foreground:     _orange-fade2
   editorGroup.border:            _border
   editorWhitespace.foreground:   _steel-gray
@@ -92,6 +90,17 @@ colors:
   # Currently active line background
   editor.lineHighlightBackground:  _gray
   editor.hoverHighlightBackground: _blue-fade2
+  editorBracketMatch.border:     _green
+  editorBracketMatch.background: _green-fade2
+  editorBracketHighlight.foreground1:       _orange
+  editorBracketPairGuide.activeBackground1: _orange
+  editorBracketPairGuide.background1:       _orange-fade
+  editorBracketHighlight.foreground2:       _light-blue
+  editorBracketPairGuide.activeBackground2: _light-blue
+  editorBracketPairGuide.background2:       _light-blue-fade2
+  editorBracketHighlight.foreground3:       _light-pink
+  editorBracketPairGuide.activeBackground3: _light-pink
+  editorBracketPairGuide.background3:       _light-pink-fade
   # -----------------------------------------------------------------------------
   # Widgets
   # -----------------------------------------------------------------------------
@@ -99,8 +108,9 @@ colors:
   # file find.
   editorWidget.background:      _background-light
   editorWidget.border:          _gray
-  editorHoverWidget.background: _background-light
-  editorHoverWidget.border:     _gray
+  editorHoverWidget.background:          _background-light
+  editorHoverWidget.border:              _gray
+  editorHoverWidget.highlightForeground: _green
   editorSuggestWidget.selectedForeground: _green
   editorSuggestWidget.selectedBackground: _green-fade2
   # -----------------------------------------------------------------------------
