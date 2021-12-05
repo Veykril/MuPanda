@@ -1,0 +1,16 @@
+langKey: haskell
+tokenColors:
+  - scope: storage.type
+    settings:
+      foreground: _type
+  - scope: entity.name.namespace
+    settings:
+      foreground: _namespace
+  - scope: entity.name.function.infix
+    settings:
+      foreground: _foreground
+  - scope: constant.other
+    settings:
+      foreground: _font-primary
+      fontStyle: bold
+semanticTokenColors:
