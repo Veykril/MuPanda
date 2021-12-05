@@ -66,10 +66,12 @@ semanticTokenColors:
   variable.callable.mutable:
     foreground: _function
     fontStyle: _style-mutable
-  # needs to be specified seperately due to the use of variable.static
+  parameter.callable: _function
+  parameter.callable.mutable:
+    foreground: _function
+    fontStyle: _style-mutable
   variable.static.mutable:
     fontStyle: _style-mutable _style-global
-  # statics are only unsafe when they are mutable
   variable.static.mutable.unsafe:
     foreground: _red
     fontStyle: _style-mutable _style-global
