@@ -62,6 +62,7 @@ semanticTokenColors:
   '*.mutable':
     fontStyle: _style-mutable
   generic.attribute: _font-primary
+  derive: _macro-interface
   variable.callable: _function
   variable.callable.mutable:
     foreground: _function

@@ -127,6 +127,7 @@ _comment: _light-midnight
 
 _macro: _light-blue
 _macro-directive: _light-blue
+_macro-interface: _light-purple
 
 # Styles
 
