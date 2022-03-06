@@ -41,7 +41,7 @@ tokenColors:
   #    foreground: _type
    #   fontStyle: bold
 semanticTokenColors:
-  selfType: _type-special
+  selfTypeKeyword: _keyword-special
   selfKeyword: _keyword-special
   typeAlias: _type
   builtinType: _type-special
