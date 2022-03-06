@@ -1,4 +1,5 @@
+langKey: json
 tokenColors:
-- scope: support.type.property-name.json.comments
+- scope: support.type.property-name
   settings:
     foreground: _font-primary
