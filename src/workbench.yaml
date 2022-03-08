@@ -149,6 +149,11 @@ colors:
   problemsWarningIcon.foreground: _warning
   problemsInfoIcon.foreground:    _info
   # -----------------------------------------------------------------------------
+  # Inlay Hints
+  # -----------------------------------------------------------------------------
+  editorInlayHint.foreground: _lighter-gray-fade
+  editorInlayHint.background: _transparent
+  # -----------------------------------------------------------------------------
   # Git Gutters
   # -----------------------------------------------------------------------------
   editorGutter.modifiedBackground: _git-modified
