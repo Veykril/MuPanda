@@ -2,10 +2,10 @@
 	"name": "theme-mupanda",
 	"displayName": "MuPanda Theme",
 	"description": "MuPanda Theme for Visual Studio Code.",
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"publisher": "veykril",
 	"engines": {
-		"vscode": "^1.20.0"
+		"vscode": "^1.62.0"
 	},
 	"categories": [
 		"Themes"

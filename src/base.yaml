@@ -1,6 +1,6 @@
 $schema: vscode://schemas/color-theme
-author: Siamak Mokhtari, Modified by Lukas Wirth
-name: Panda Syntax – Beta
+author: Lukas Wirth
+name: MuPanda
 colorSpaceName: sRGB
 semanticClass: theme.dark.mu_panda
 semanticHighlighting: true

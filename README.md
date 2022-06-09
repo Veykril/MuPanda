@@ -1,7 +1,8 @@
 # Mupanda
 
+You can install the extension via the [marketplace](https://marketplace.visualstudio.com/items?itemName=veykril.theme-mupanda).
+
 Personal Syntax Theme based on [Panda-Syntax](https://www.github.com/tinkertrain/panda-syntax-vscode) for Visual Studio Code.
-The extension isn't on the marketplace, instead build it yourself or fetch a build artifact from [the actions tab](https://github.com/Veykril/MuPanda/actions).
 
 This extension mainly makes use of semantic highlighting, so if used without it the theme will look broken for most things.
 
