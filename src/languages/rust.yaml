@@ -46,6 +46,8 @@ semanticTokenColors:
   typeAlias: _type
   builtinType: _type-special
   enumMember: _type
+  '*.trait':
+    fontStyle: italic
   lifetime:
     foreground: _string
     fontStyle: italic
