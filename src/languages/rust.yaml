@@ -1,52 +1,17 @@
 langKey: rust
 tokenColors:
-  # &, ::, =>, etc.
-  - scope: keyword.operator.misc, keyword.operator.sigil
-    settings:
-      foreground: _font-primary
-  - scope: storage.modifier.visibility, storage.modifier.mut, storage.modifier.dyn, storage.modifier.const
-    settings:
-      foreground: _keyword
-  # general attributes/macros
-  - scope: entity.name.function.attribute, entity.name.function.macro
-    settings:
-      foreground: _function-special
-  - scope: comment.block.documentation, comment.line.documentation
-    settings:
-      foreground: _comment-doc
-      fontStyle: italic
   # lifetime
-  - scope: storage.modifier.lifetime
+  - scope: entity.name.type.lifetime
     settings:
       foreground: _string
       fontStyle: italic
-  # self/box
-  - scope: variable.language, storage.modifier.box
-    settings:
-      foreground: _keyword-special
-  - scope: keyword.other.unsafe
-    settings:
-      foreground: _red
-      fontStyle: bold
-  - scope: support.type.primitive
-    settings:
-      foreground: _type-special
-  # char literals
-  - scope: string.quoted.single
-    settings:
-      foreground: _string-special
-  # also colors the angle brackets, so just rely on semantic highlighting instead for this
-  #- scope: meta.type_params
-  #  settings:
-  #    foreground: _type
-   #   fontStyle: bold
 semanticTokenColors:
   selfTypeKeyword: _keyword-special
   selfKeyword: _keyword-special
   typeAlias: _type
   builtinType: _type-special
   enumMember: _type
-  '*.trait':
+  "*.trait":
     fontStyle: italic
   lifetime:
     foreground: _string
@@ -58,10 +23,10 @@ semanticTokenColors:
     foreground: _font-primary
     fontStyle: bold
   # modifiers
-  '*.unsafe':
+  "*.unsafe":
     foreground: _red
     fontStyle: bold
-  '*.mutable':
+  "*.mutable":
     fontStyle: _style-mutable
   generic.attribute: _font-primary
   derive: _macro-interface
