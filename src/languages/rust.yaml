@@ -28,6 +28,12 @@ semanticTokenColors:
     fontStyle: bold
   "*.mutable":
     fontStyle: _style-mutable
+  "*.mutable.unsafe":
+    fontStyle: _style-mutable bold
+  "*.mutable.trait":
+    fontStyle: _style-mutable italic
+  "*.mutable.unsafe.trait":
+    fontStyle: _style-mutable italic bold
   generic.attribute: _font-primary
   derive: _macro-interface
   variable.callable: _function
