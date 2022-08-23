@@ -140,7 +140,7 @@ semanticTokenColors:
   method: _function
   macro: _macro
   builtinAttribute: _macro-directive
-  attribute: _macro
+  decorator: _macro
 
   parameter: _font-primary
   property: _font-primary
