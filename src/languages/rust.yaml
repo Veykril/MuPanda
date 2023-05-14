@@ -1,12 +1,13 @@
 langKey: rust
 tokenColors:
-  - scope: entity.name.function.macro.rules.rust
+  - scope: entity.name.function.macro.rules
     settings:
       foreground: _keyword
-  - scope: variable.language.super.rust
+  - scope: variable.language.super
     settings:
       foreground: _keyword
 semanticTokenColors:
+  attributeBracket.attribute: _macro-directive
   selfTypeKeyword: _keyword-special
   selfKeyword: _keyword-special
   typeAlias: _type

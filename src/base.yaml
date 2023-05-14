@@ -5,109 +5,108 @@ colorSpaceName: sRGB
 semanticClass: theme.dark.mu_panda
 semanticHighlighting: true
 tokenColors:
+  # -----------------------------------------------------------------------------
+  # Comments
+  # -----------------------------------------------------------------------------
+  # Generic <comment> matches
+  - scope: comment
+    settings:
+      foreground: _comment
+      fontStyle: italic
 
-# -----------------------------------------------------------------------------
-# Comments
-# -----------------------------------------------------------------------------
-# Generic <comment> matches
-- scope: comment
-  settings:
-    foreground: _comment
-    fontStyle: italic
+  - scope: comment.block
+    settings:
+      foreground: _comment
+      fontStyle: italic
 
-- scope: comment.block
-  settings:
-    foreground: _comment
-    fontStyle: italic
+  # -----------------------------------------------------------------------------
+  # Keywords & Operators
+  # -----------------------------------------------------------------------------
+  # Generic <keyword> matches
+  - scope: keyword
+    settings:
+      foreground: _keyword
 
-# -----------------------------------------------------------------------------
-# Keywords & Operators
-# -----------------------------------------------------------------------------
-# Generic <keyword> matches
-- scope: keyword
-  settings:
-    foreground: _keyword
+  # Make operators light gray by default
+  - scope: keyword.operator
+    settings:
+      foreground: _operator
 
-# Make operators light gray by default
-- scope: keyword.operator
-  settings:
-    foreground: _operator
+  # 1. Control flow operators
+  # 2. `new` keyword
+  - scope: keyword.control, keyword.operator.new
+    settings:
+      foreground: _keyword
 
-# 1. Control flow operators
-# 2. `new` keyword
-- scope: keyword.control, keyword.operator.new
-  settings:
-    foreground: _keyword
+  # -----------------------------------------------------------------------------
+  # Storage
+  # -----------------------------------------------------------------------------
+  # Generic <storage> matches
+  - scope: storage, storage.type
+    settings:
+      foreground: _keyword
 
-# -----------------------------------------------------------------------------
-# Storage
-# -----------------------------------------------------------------------------
-# Generic <storage> matches
-- scope: storage, storage.type
-  settings:
-    foreground: _keyword
+  - scope: storage.modifier
+    settings:
+      foreground: _keyword
 
-- scope: storage.modifier
-  settings:
-    foreground: _keyword
+  # -----------------------------------------------------------------------------
+  # Constants
+  # -----------------------------------------------------------------------------
+  # Generic <constant> matches
+  - scope: constant
+    settings:
+      foreground: _type
 
-# -----------------------------------------------------------------------------
-# Constants
-# -----------------------------------------------------------------------------
-# Generic <constant> matches
-- scope: constant
-  settings:
-    foreground: _type
+  # true/false booleans, null, undefined
+  - scope: constant.language
+    settings:
+      foreground: _keyword-special
 
-# true/false booleans, null, undefined
-- scope: constant.language
-  settings:
-    foreground: _keyword-special
+  # Regex, string escape `\`
+  - scope: constant.character.escape
+    settings:
+      foreground: _interpolation
 
-# Regex, string escape `\`
-- scope: constant.character.escape
-  settings:
-    foreground: _interpolation
+  # -----------------------------------------------------------------------------
+  # Variables && Parameters
+  # -----------------------------------------------------------------------------
+  # Generic <variable> matches
+  - scope: variable
+    settings:
+      foreground: _variable
 
-# -----------------------------------------------------------------------------
-# Variables && Parameters
-# -----------------------------------------------------------------------------
-# Generic <variable> matches
-- scope: variable
-  settings:
-    foreground: _variable
+  # Function parameters
+  - scope: variable.parameter
+    settings:
+      foreground: _variable
 
-# Function parameters
-- scope: variable.parameter
-  settings:
-    foreground: _variable
+  - scope: variable.other.constant, variable.language.this, variable.language.self
+    settings:
+      foreground: _keyword-special
 
-- scope: variable.other.constant, variable.language.this, variable.language.self
-  settings:
-    foreground: _keyword-special
+  # -----------------------------------------------------------------------------
+  # Strings
+  # -----------------------------------------------------------------------------
+  # Generic string match
+  - scope: string
+    settings:
+      foreground: _string
 
-# -----------------------------------------------------------------------------
-# Strings
-# -----------------------------------------------------------------------------
-# Generic string match
-- scope: string
-  settings:
-    foreground: _string
-
-# -----------------------------------------------------------------------------
-# Entities
-# -----------------------------------------------------------------------------
-# Function names
-- scope: entity.name.function
-  settings:
-    foreground: _function
-- scope: entity.name.type
-  settings:
-    foreground: _type
-# preprocessor macros
-- scope: keyword.control.directive
-  settings:
-    foreground: _macro-directive
+  # -----------------------------------------------------------------------------
+  # Entities
+  # -----------------------------------------------------------------------------
+  # Function names
+  - scope: entity.name.function
+    settings:
+      foreground: _function
+  - scope: entity.name.type
+    settings:
+      foreground: _type
+  # preprocessor macros
+  - scope: keyword.control.directive
+    settings:
+      foreground: _macro-directive
 semanticTokenColors:
   formatSpecifier: _interpolation
   string: _string
