@@ -1,10 +1,11 @@
 langKey: rust
 tokenColors:
-  # lifetime
-  - scope: entity.name.type.lifetime
+  - scope: entity.name.function.macro.rules.rust
     settings:
-      foreground: _string
-      fontStyle: italic
+      foreground: _keyword
+  - scope: variable.language.super.rust
+    settings:
+      foreground: _keyword
 semanticTokenColors:
   selfTypeKeyword: _keyword-special
   selfKeyword: _keyword-special
