@@ -2,7 +2,7 @@ name: vsce
 on:
   push:
     branches:
-    - master
+      - master
   workflow_dispatch:
 
 jobs:
@@ -10,28 +10,34 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - name: Cache vsce module
-      uses: actions/cache@v3
-      with:
-        path: ~/.npm
-        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.OS }}-node-
-          ${{ runner.OS }}-
-    - name: Install vsce
-      run: npm install -g vsce
-    - name: Install deno
-      run: curl -fsSL https://deno.land/x/install/install.sh | sh
-    - name: Build theme
-      run: /home/runner/.deno/bin/deno run --allow-read --allow-write build.ts
-    - name: Package extension
-      run: vsce package
-    - uses: actions/upload-artifact@v3
-      with:
-        name: Extension
-        path: '*.vsix'
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Cache vsce module
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.OS }}-node-
+            ${{ runner.OS }}-
+      - name: Install vsce
+        run: npm install -g vsce
+      - name: Install deno
+        run: curl -fsSL https://deno.land/x/install/install.sh | sh
+      - name: Build theme
+        run: /home/runner/.deno/bin/deno run --allow-read --allow-write build.ts
+      - name: Package extension
+        run: vsce package
+      - name: git stuff
+        run: |
+          git config --global user.email "ci@ci.com"
+          git config --global user.name "CI"
+      - name: Publish extension
+        run: vsce publish --pat ${{ secrets.MARKETPLACE_TOKEN }} 0.0.${{ github.run_number }}
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Extension
+          path: "*.vsix"
