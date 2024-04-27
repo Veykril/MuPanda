@@ -14,7 +14,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "20"
       - name: Cache vsce module
         uses: actions/cache@v3
         with:
@@ -37,7 +37,7 @@ jobs:
           git config --global user.name "CI"
       - name: Publish extension
         run: vsce publish --pat ${{ secrets.MARKETPLACE_TOKEN }} 0.0.${{ github.run_number }}
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: Extension
           path: "*.vsix"
