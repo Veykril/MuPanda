@@ -25,14 +25,14 @@ semanticTokenColors:
   # modifiers
   "*.trait":
     fontStyle: italic
-  "*.const":
+  "*.constant":
     fontStyle: bold
-  "*.const.trait":
+  "*.constant.trait":
     fontStyle: italic bold
   "*.unsafe":
     foreground: _red
     fontStyle: bold
-  "*.unsafe.const":
+  "*.unsafe.constant":
     foreground: _red
     fontStyle: bold
   "*.unsafe.trait":
