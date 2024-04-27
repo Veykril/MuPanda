@@ -13,8 +13,6 @@ semanticTokenColors:
   typeAlias: _type
   builtinType: _type-special
   enumMember: _type
-  "*.trait":
-    fontStyle: italic
   lifetime:
     foreground: _string
     fontStyle: italic
@@ -25,9 +23,20 @@ semanticTokenColors:
     foreground: _font-primary
     fontStyle: bold
   # modifiers
+  "*.trait":
+    fontStyle: italic
+  "*.const":
+    fontStyle: bold
+  "*.const.trait":
+    fontStyle: italic bold
   "*.unsafe":
     foreground: _red
     fontStyle: bold
+  "*.unsafe.const":
+    foreground: _red
+    fontStyle: bold
+  "*.unsafe.trait":
+    fontStyle: italic bold
   "*.mutable":
     fontStyle: _style-mutable
   "*.mutable.unsafe":
