@@ -111,7 +111,7 @@ semanticTokenColors:
   formatSpecifier: _interpolation
   string: _string
   # charLiteral: _string-special, isn't a thing yet
-  escapeSequence: _interpolation
+  escapeSequence: _string-special
   boolean: _keyword-special
   number: _literal
 
