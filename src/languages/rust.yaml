@@ -65,6 +65,9 @@ semanticTokenColors:
     foreground: _font-primary
   punctuation.injected:
     foreground: _font-primary
+  punctuation.unsafe:
+    foreground: _red
+    fontStyle: bold
   # punctuation
   bracket:
     foreground: _font-primary

@@ -31,13 +31,13 @@ jobs:
         run: /home/runner/.deno/bin/deno run --allow-read --allow-write build.ts
       - name: Package extension
         run: vsce package
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Extension
+          path: "*.vsix"
       - name: git stuff
         run: |
           git config --global user.email "ci@ci.com"
           git config --global user.name "CI"
       - name: Publish extension
         run: vsce publish --pat ${{ secrets.MARKETPLACE_TOKEN }} 0.0.${{ github.run_number }}
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Extension
-          path: "*.vsix"
